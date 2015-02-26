@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1.0" name="viewport">
+        <meta content="Brea Olinda High School's First Hackathon" name="HackBrea">
+
+        <title>HackBrea</title>
+
+        <link href="resources/styles/mdi/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="resources/styles/main.css" rel="stylesheet">
+        
+        <script src="resources/scripts/greensock-js/plugins/CSSPlugin.min.js"></script>
+        <script src="resources/scripts/greensock-js/easing/EasePack.min.js"></script>
+        <script src="resources/scripts/greensock-js/TweenLite.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/smooth-scroll.js"></script>
+        <script type="text/javascript" src="resources/scripts/headers.js"></script>
+        <script type="text/javascript" src="resources/scripts/main.js"></script>
+    </head>
+    
+    <body onload="onload();">
+        <header>
+            <div id="title" class="title">
+                <div class="text">HackBrea</div>
+                <button class="material raised dark" style="font-size: 50px; height: 83px; position: relative; top: -50px;" onclick="openRegisterForm();">Sign Up!</button>
+                <div id="register">
+                    <form>
+                        <div style="font-size: 50px; color: black; display: block;">Sign Up</div>
+                        
+                        <input type="text" class="material light" placeholder="First Name" />
+                        <input type="text" class="material light" placeholder="Last Name" />
+                        <input type="email" class="material light" placeholder="Email" />
+                        <input type="url" class="material light" placeholder="Github" />
+                        <input type="text" class="material light" placeholder="School" />
+                        <input type="number" class="material light" placeholder="Age" value="16" />
+                        <div>
+                            <input type="radio" name="grade" class="material light" id="gradeFreshman" value="freshman" /><label for="gradeFreshman">Freshman</label><br />
+                            <input type="radio" name="grade" class="material light" id="gradeSophomore" value="sophomore" /><label for="gradeSophomore">Sophomore</label><br />
+                            <input type="radio" name="grade" class="material light" id="gradeJunior" value="junior" /><label for="gradeJunior">Junior</label><br />
+                            <input type="radio" name="grade" class="material light" id="gradeSenior" value="senior" /><label for="gradeSenior">Senior</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" class="material light" value="male" /><label for="grade">Male</label><br />
+                            <input type="radio" name="gender" class="material light" value="female" /><label for="grade">Female</label><br />
+                            <input type="radio" name="gender" class="material light" value="other" /><label for="grade">Other</label><br />
+                            <input type="radio" name="gender" class="material light" value="dnd" /><label for="grade">Prefer not to disclose</label><br />
+                        </div>
+                        <input type="text" class="material light" placeholder="Skills" />
+                        <input type="submit" class="material light raised" value="Submit" />
+                        <input type="reset" class="material light raised" value="Reset" />
+                        <input type="button" class="material light raised" value="Cancel" onclick="closeRegisterForm();" />
+                    </form>
+                </div>
+                <br />
+                <button class="material floating dark" id="downArrow" onclick="scrollToTopOfContent();" data-scroll href="#main"><i class="mdi mdi-chevron-down"></i></button>
+            </div>
+            <div id="headerImg" class="headerImg"></div>
+        </header>
+
+        <div id="main">
+            <div id="about">
+                <div class="question">
+                    <div class="query">
+                        What is a hackathon?
+                    </div>
+                    <div class="answer">
+                        Hacking is not about breaking into your school computers.
+                        Hackathons are a place where students come together to work on fun projects using technology.
+                        It's a great time to hangout with friends, work on something you care about, and have food paid for.
+                        Check out this blog post written by a hackathon veteran.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        When?
+                    </div>
+                    <div class="answer">
+                        HackBrea will start at 9:00 AM Saturday, May 20th, and continue until 12:00 PM Sunday, May 21st.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        Where?
+                    </div>
+                    <div class="answer">
+                        The main event will be in the Wildcat gym, at Brea Olinda High School,<address style="padding: 5px 0px 5px 0px;"> 789 Wildcat Way<br /> Brea CA, 92821</address>
+                        There will be other side events taking place througout campus, including learning workshops, gaming tournaments, and more!
+                    </div>
+                </div>
+            </div>
+            <div id="FAQ">
+                <div class="question">
+                    <div class="query">
+                        What's a hackathon?
+                    </div>
+                    <div class="answer">
+                        Hacking is not about breaking into your school computers.
+                        Hackathons are a place where students come together to work on fun projects using technology.
+                        It's a great time to hangout with friends, work on something you care about, and have food paid for.
+                        Check out this blog post written by a hackathon veteran.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        Do I need to be 1337?
+                    </div>
+                    <div class="answer">
+                        TeenHacks is for beginners and experts alike.
+                        As long as you want to build something (whether you know how to or not), you can come.
+                        A main focus of this event is to introduce beginners.
+                        Mentors will be available throughout the event to get you started.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        What should I bring?
+                    </div>
+                    <div class="answer">
+                        All your friends, computer (laptop or desktop), school ID, phone, toiletries, sleeping bag (optional), and anything else you might need.
+                        If you have a particular hardware idea in mind, you can bring your own materials.
+                        We will have some on hand but they will be in limited supply.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        What can I make?
+                    </div>
+                    <div class="answer">
+                        Just about anything. You could make your first website, your first iPhone app, your first Android app, your first robot.
+                        The possibilities are endless. Whatever it is, mentors will get you started.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        Do I need a team?
+                    </div>
+                    <div class="answer">
+                        Nope. Just come to the event and we will find you a team.
+                        We'll be holding a team making session before the hacking begins.
+                        You can also find teammates on Facebook beforehand.
+                        Working alone is fine too. Teams can have at most 4 people.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        How much does it cost?
+                    </div>
+                    <div class="answer">
+                        This event is completely free. Meals and snacks are provided the entire event.
+                        All you need to worry about is learning and building.
+                        We'll take care of the rest. Unfortunately though, we will not be providing travel reimbursement.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        Who can attend?
+                    </div>
+                    <div class="answer">
+                        Anyone currently enrolled in high school who wants to learn or improve their skills.
+                        If you're in college (or want to help but not hack), you can also sign up to be a mentor.
+                        You'll get to help out some newbies and make a great impact on their hackathon experience.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        How will I not starve?
+                    </div>
+                    <div class="answer">
+                        We will be providing meals (In N Out) and snacks (those gummies and chips 'n stuff) (lots of them!)
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        Who will own my work?
+                    </div>
+                    <div class="answer">
+                        Don't worry, your team will own the project.
+                        We want to see the awesome stuff you can make, but even more than that we want to see your project take off afterward.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        How will projects be judged?
+                    </div>
+                    <div class="answer">
+                        You will demo your project to a panel of judges, then they will make decisions based on a combination of novelty, utility, design, overall coolness, and technical complexity.
+                    </div>
+                </div>
+            </div>
+            <div id="sponsors">
+                <div id="platinum">
+                    <div class="level">Platinum</div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/google.png')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/apple.png'); height: 100px; margin-top: 40px;"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/microsoft.svg')"></div>
+                    </div>
+                </div>
+                <div id="gold">
+                    <div class="level">Gold</div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/github.png')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/beckman.png')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/namecheap.png')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/oculus.png')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/mlh.png')"></div>
+                    </div>
+                </div>
+                <div id="silver">
+                    <div class="level">Silver</div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/visage.png')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/teespring.svg')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/wolfram.svg')"></div>
+                    </div>
+                    <div class="sponsor">
+                        <div class="logo" style="background-image: url('/resources/images/sponsors/duckduckgo.png')"></div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                Made with <span style="color:rgb(255, 0, 0);">&hearts;</span> by <a href="http://0rleans.com">Louis Orleans</a>
+            </footer>
+        </div>
+    </body>
+</html>
