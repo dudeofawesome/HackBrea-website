@@ -37,16 +37,62 @@ function onload () {
     
     setFastScroll(document.getElementById("title"));
     setSlowScroll(document.getElementById("headerImg"));
+    
+    var fixedFAB = document.getElementById("downArrow");
+    var pos = fixedFAB.getBoundingClientRect();
+    originalPos = {right:window.innerWidth - (pos.left + pos.width), bottom:window.innerHeight - (pos.top + pos.height)};
 }
 
 function scrollToTopOfContent () {
     smoothScroll.animateScroll(
-        document.getElementById("downArrow"), // Node that toggles the animation. ex. document.querySelector('#toggle')
-        "#main" // ID of the anchor to scroll to. ex. '#bazinga'
+        document.getElementById("downArrow"),
+        "#main"
+    );
+}
+
+function scrollToTopOfPage () {
+    smoothScroll.animateScroll(
+        document.getElementById("floatingUpArrow"),
+        "#body"
     );
 }
 
 var tweenTime = 0.3;
+
+var originalPos;
+function switchToFAB () {
+    var FAB = document.getElementById("floatingUpArrow");
+    var fixedFAB = document.getElementById("downArrow");
+    
+    if (FAB.style.display === "none" || FAB.style.display === "") {
+        var pos = fixedFAB.getBoundingClientRect();
+        FAB.style.right = window.innerWidth - (pos.left + pos.width) + "px";
+        FAB.style.bottom = window.innerHeight - (pos.top + pos.height) + "px";
+        FAB.style.transform = "scale(1.3)";
+        fixedFAB.style.display = "none";
+        FAB.style.display = "block";
+
+        TweenLite.to(FAB, tweenTime, {
+            bottom: "25px",
+            right: "25px",
+            transform: "scale(1.3) rotateZ(180deg)"
+        });
+    } else {
+        FAB.style.bottom = "25px";
+        FAB.style.right = "25px";
+        FAB.style.transform = "scale(1.3)";
+
+        TweenLite.to(FAB, tweenTime + 0.2, {
+            right: originalPos.right + "px",
+            bottom: originalPos.bottom + "px",
+            transform: "scale(1.3) rotateZ(0deg)",
+            onComplete: function () {
+                FAB.style.display = "none";
+                fixedFAB.style.display = "block";
+            }
+        });
+    }
+}
 
 function openRegisterForm () {
     var registerForm = document.getElementById("register");
@@ -60,4 +106,21 @@ function closeRegisterForm () {
     
     registerForm.style.pointerEvents = "none";
     TweenLite.to(registerForm, tweenTime, {opacity: 0, transform: "scale(0.22, 0.1)", top: "-430px"});
+}
+
+function GetScreenCordinates(obj) {
+    var p = {};
+    p.x = obj.offsetLeft;
+    p.y = obj.offsetTop;
+    while (obj.offsetParent) {
+        p.x = p.x + obj.offsetParent.offsetLeft;
+        p.y = p.y + obj.offsetParent.offsetTop;
+        if (obj == document.getElementsByTagName("body")[0]) {
+            break;
+        }
+        else {
+            obj = obj.offsetParent;
+        }
+    }
+    return p;
 }

@@ -6,6 +6,7 @@
         <meta content="Brea Olinda High School's First Hackathon" name="HackBrea">
 
         <title>HackBrea</title>
+        <link rel='shortcut icon' href="resources/images/favicon.ico">
 
         <link href="resources/styles/mdi/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
         <link href="resources/styles/main.css" rel="stylesheet">
@@ -16,12 +17,14 @@
         <script type="text/javascript" src="resources/scripts/smooth-scroll.js"></script>
         <script type="text/javascript" src="resources/scripts/headers.js"></script>
         <script type="text/javascript" src="resources/scripts/main.js"></script>
+        
+        <meta name="viewport" content="width=device-width,user-scalable=false" />
     </head>
     
-    <body onload="onload();">
-        <header>
+    <body onload="onload();" id="body">
+        <header id="header">
             <div id="title" class="title">
-                <div class="text">HackBrea</div>
+                <div class="text">TAR<img src="resources/images/icon.png" />HACKS</div>
                 <button class="material raised dark" style="font-size: 50px; height: 83px; position: relative; top: -50px;" onclick="openRegisterForm();">Sign Up!</button>
                 <div id="register">
                     <form>
@@ -52,10 +55,12 @@
                     </form>
                 </div>
                 <br />
-                <button class="material floating dark" id="downArrow" onclick="scrollToTopOfContent();" data-scroll href="#main"><i class="mdi mdi-chevron-down"></i></button>
+                <button class="material floating dark" id="downArrow" onclick="scrollToTopOfContent(); switchToFAB();" data-scroll href="#main"><i class="mdi mdi-chevron-down"></i></button>
             </div>
             <div id="headerImg" class="headerImg"></div>
         </header>
+
+        <button class="material floating dark" id="floatingUpArrow" onclick="scrollToTopOfPage(); switchToFAB();"><i class="mdi mdi-chevron-down"></i></button>
 
         <div id="main">
             <div id="about">
@@ -189,7 +194,7 @@
             </div>
             <div id="sponsors">
                 <div id="platinum">
-                    <div class="level">Platinum</div>
+                    <div class="level"><i class="mdi mdi-star-circle"></i></div>
                     <div class="sponsor">
                         <div class="logo" style="background-image: url('/resources/images/sponsors/google.png')"></div>
                     </div>
@@ -201,7 +206,7 @@
                     </div>
                 </div>
                 <div id="gold">
-                    <div class="level">Gold</div>
+                    <div class="level"><i class="mdi mdi-star-circle"></i></div>
                     <div class="sponsor">
                         <div class="logo" style="background-image: url('/resources/images/sponsors/github.png')"></div>
                     </div>
@@ -219,7 +224,7 @@
                     </div>
                 </div>
                 <div id="silver">
-                    <div class="level">Silver</div>
+                    <div class="level"><i class="mdi mdi-star-circle"></i></div>
                     <div class="sponsor">
                         <div class="logo" style="background-image: url('/resources/images/sponsors/visage.png')"></div>
                     </div>
