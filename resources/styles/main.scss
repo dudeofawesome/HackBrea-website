@@ -41,12 +41,12 @@ header .headerImg {
     background-position: 50% 50%;
 }
 
-header .title {
+header #title {
     position: absolute;
-    bottom: -580px;
+    bottom: 50px;
     left: 50%;
-    width: 770px;
-    margin-left: -370px;
+    width: 780px;
+    margin-left: -375px;
     margin-top: -50px;
     z-index: 2;
     
@@ -88,6 +88,10 @@ header {
     text-align: center;
 }
 
+#main>#about {
+    margin-top: 15px;
+}
+
 #main #about:before {
     position: relative;
     top: -25px;
@@ -127,13 +131,13 @@ header {
     text-align: center;
 }
 
-#main>div {
+#main>.content {
     line-height: 0.1em;
     border-top: 3px solid $secondary-1;
-    margin: 10px 50px 10px 50px;
+    margin: 30px 50px 10px 50px;
 }
 
-#main div * {
+#main .content * {
     line-height: 1em;
 }
 
@@ -290,7 +294,7 @@ footer {
 
 header #downArrow {
     position: absolute;
-    top: 450px;
+    top: 500px;
     left: 50%;
     margin-left: -25px;
     width: 50px;
@@ -308,10 +312,50 @@ header #downArrow i {
     left: -16px;
 }
 
-header #register {
+header #title .text {
+    margin-bottom: 50px;
+    text-shadow: 0px 10px 50px rgba(0, 0, 0, 0.9);
+}
+
+header #title .text img {
+    margin-left: 10px;
+    margin-right: 10px;
     position: relative;
-    top: -430px;
-    margin-left: -185px;
+    top: 60px;
+    width: 200px;
+    border-radius: 150px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#floatingUpArrow {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    transform: scale(1.3) rotateZ(0deg);
+    
+    font-size: 50px;
+    text-align: center;
+    
+    transition: transform 0.5s;
+}
+
+#floatingUpArrow i {
+    position: relative;
+    top: -19px;
+    left: -16px;
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -300px;
     width: 1000px;
     height: 600px;
     z-index: 2;
@@ -325,42 +369,101 @@ header #register {
     pointer-events: none;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-header #register label {
-    font-size: 15px;
-}
-
-header #title .text {
-    margin-bottom: 100px;
-    text-shadow: 0px 10px 50px rgba(0, 0, 0, 0.9);
-}
-
-header #title .text img {
-    padding-left: 10px;
-    padding-right: 10px;
-    position: relative;
-    top: 60px;
-    width: 200px;
-}
-
-#floatingUpArrow {
-    display: none;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-    transform: scale(1.3);
-    
-    font-size: 50px;
+    line-height: 0.2;
     text-align: center;
 }
 
-#floatingUpArrow i {
-    position: relative;
-    top: -19px;
-    left: -16px;
+.form label {
+    font-size: 15px;
+}
+
+.form .radioBoxGroup {
+    display:inline-block;
+    line-height: 0;
+    text-align: left;
+}
+
+.form .radioBoxGroup input {
+    padding: 0px;
+    margin: 0px;
+}
+
+.form .row {
+    text-align: left;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.form .row .cell {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.form .row input[type="text"], .form .row input[type="email"], .form .row input[type="url"], .form .row input[type="number"] {
+    width: 220px;
+}
+
+.form .row:nth-of-type(0) {
+    z-index: 9;
+}
+
+.form .row:nth-of-type(1) {
+    z-index: 8;
+}
+
+.form .row:nth-of-type(2) {
+    z-index: 7;
+}
+
+.form .row:nth-of-type(3) {
+    z-index: 6;
+}
+
+.form .row:nth-of-type(4) {
+    z-index: 5;
+}
+
+.form .row:nth-of-type(5) {
+    z-index: 4;
+}
+
+.form .row:nth-of-type(6) {
+    z-index: 3;
+}
+
+.form .row:nth-of-type(7) {
+    z-index: 2;
+}
+
+.form .row:nth-of-type(8) {
+    z-index: 1;
+}
+
+#social {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+}
+
+#social i {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    
+    transition: color 0.5s;
+}
+
+#social i:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#main .breaker {
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4) inset;
+    margin-left: -20px;
+    margin-right: -20px;
 }

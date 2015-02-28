@@ -23,37 +23,17 @@
     
     <body onload="onload();" id="body">
         <header id="header">
+            <div id="social">
+                <a href="http://twitter.com/tarhacks"><i class="mdi mdi-twitter-box"></i></a>
+                <a href="http://facebook.com/tarhacks"><i class="mdi mdi-facebook-box"></i></a>
+            </div>
             <div id="title" class="title">
-                <div class="text">TAR<img src="resources/images/icon.png" />HACKS</div>
-                <button class="material raised dark" style="font-size: 50px; height: 83px; position: relative; top: -50px;" onclick="openRegisterForm();">Sign Up!</button>
-                <div id="register">
-                    <form>
-                        <div style="font-size: 50px; color: black; display: block;">Sign Up</div>
-                        
-                        <input type="text" class="material light" placeholder="First Name" />
-                        <input type="text" class="material light" placeholder="Last Name" />
-                        <input type="email" class="material light" placeholder="Email" />
-                        <input type="url" class="material light" placeholder="Github" />
-                        <input type="text" class="material light" placeholder="School" />
-                        <input type="number" class="material light" placeholder="Age" value="16" />
-                        <div>
-                            <input type="radio" name="grade" class="material light" id="gradeFreshman" value="freshman" /><label for="gradeFreshman">Freshman</label><br />
-                            <input type="radio" name="grade" class="material light" id="gradeSophomore" value="sophomore" /><label for="gradeSophomore">Sophomore</label><br />
-                            <input type="radio" name="grade" class="material light" id="gradeJunior" value="junior" /><label for="gradeJunior">Junior</label><br />
-                            <input type="radio" name="grade" class="material light" id="gradeSenior" value="senior" /><label for="gradeSenior">Senior</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="gender" class="material light" value="male" /><label for="grade">Male</label><br />
-                            <input type="radio" name="gender" class="material light" value="female" /><label for="grade">Female</label><br />
-                            <input type="radio" name="gender" class="material light" value="other" /><label for="grade">Other</label><br />
-                            <input type="radio" name="gender" class="material light" value="dnd" /><label for="grade">Prefer not to disclose</label><br />
-                        </div>
-                        <input type="text" class="material light" placeholder="Skills" />
-                        <input type="submit" class="material light raised" value="Submit" />
-                        <input type="reset" class="material light raised" value="Reset" />
-                        <input type="button" class="material light raised" value="Cancel" onclick="closeRegisterForm();" />
-                    </form>
+                <div class="text">HACK<img src="resources/images/icon.png" />BREA</div>
+                <div>
+                    <button id="volunteerButton" class="material raised dark" style="font-size: 40px; height: 83px; position: relative; top: -50px;" onclick="openForm('volunteer', this);">Volunteer</button>
+                    <button id="sponsorButton" class="material raised dark" style="font-size: 40px; height: 83px; position: relative; top: -50px;" onclick="openForm('sponsor', this);">Sponsor</button>
                 </div>
+                <button id="registerButton" class="material raised dark" style="font-size: 50px; height: 83px; position: relative; top: -80px;" onclick="openForm('register', this);">Sign Up!</button>
                 <br />
                 <button class="material floating dark" id="downArrow" onclick="scrollToTopOfContent(); switchToFAB();" data-scroll href="#main"><i class="mdi mdi-chevron-down"></i></button>
             </div>
@@ -62,8 +42,101 @@
 
         <button class="material floating dark" id="floatingUpArrow" onclick="scrollToTopOfPage(); switchToFAB();"><i class="mdi mdi-chevron-down"></i></button>
 
+        <div id="forms">
+            <div id="register" class="form">
+                <form action="" method="post" onsubmit="submitForm(); return false;">
+                    <div style="font-size: 50px; color: black; display: block; padding-top: 20px; padding-bottom: 15px;">Sign Up</div>
+
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="text" class="material light" id="lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="email" class="material light" id="email" placeholder="Email" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="url" class="material light" id="github" placeholder="Github" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="school" style="transform: translateY(-50px);" placeholder="School" /><div class="error">You done goofed</div></div>
+                        <div class="cell">
+                            <div class="radioBoxGroup">
+                                <input type="radio" name="grade" class="material light" id="gradeFreshman" value="freshman" checked /><label for="gradeFreshman">Freshman</label><br />
+                                <input type="radio" name="grade" class="material light" id="gradeSophomore" value="sophomore" /><label for="gradeSophomore">Sophomore</label><br />
+                                <input type="radio" name="grade" class="material light" id="gradeJunior" value="junior" /><label for="gradeJunior">Junior</label><br />
+                                <input type="radio" name="grade" class="material light" id="gradeSenior" value="senior" /><label for="gradeSenior">Senior</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="number" class="material light" id="age" style="transform: translateY(-50px);" placeholder="Age" value="" /><div class="error">You done goofed</div></div>
+                        <div class="cell">
+                            <div class="radioBoxGroup">
+                                <input type="radio" name="gender" class="material light" value="male" checked /><label for="grade">Male</label><br />
+                                <input type="radio" name="gender" class="material light" value="female" /><label for="grade">Female</label><br />
+                                <input type="radio" name="gender" class="material light" value="other" /><label for="grade">Other</label><br />
+                                <input type="radio" name="gender" class="material light" value="dnd" /><label for="grade">Prefer not to say</label><br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <textarea type="text" class="material light" id="skills" style="width:447px; max-width:100%; height: 100px;" placeholder="Skills"></textarea><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row" style="padding-bottom: 20px; text-align: center;">
+                        <input type="button" class="material light raised" value="Submit" onclick="submitForm('register'); return false;" />
+                        <input type="reset" class="material light raised" value="Reset" />
+                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('register', document.getElementById('registerButton'));" />
+                    </div>
+                </form>
+            </div>
+            <div id="volunteer" class="form">
+                <form action="" method="post" onsubmit="submitForm(); return false;">
+                    <div style="font-size: 50px; color: black; display: block; padding-top: 20px; padding-bottom: 15px;">Volunteer</div>
+
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="text" class="material light" id="lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="email" class="material light" id="email" placeholder="Email" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="number" class="material light" id="age" placeholder="Age" value="" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <textarea type="text" class="material light" id="skills" style="width:650px; max-width:100%; height: 100px;" placeholder="Skills"></textarea><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row" style="padding-bottom: 20px; text-align: center;">
+                        <input type="button" class="material light raised" value="Submit" onclick="submitForm('volunteer'); return false;" />
+                        <input type="reset" class="material light raised" value="Reset" />
+                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('volunteer', document.getElementById('volunteerButton'));" />
+                    </div>
+                </form>
+            </div>
+            <div id="sponsor" class="form">
+                <form action="" method="post" onsubmit="submitForm(); return false;">
+                    <div style="font-size: 50px; color: black; display: block; padding-top: 20px; padding-bottom: 15px;">Sponsor</div>
+
+                    <div class="row">
+                        <input type="text" class="material light" id="cName" style="width:447px;" placeholder="Company Name" /><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="text" class="material light" id="lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <input type="email" class="material light" id="email" style="width:447px;" placeholder="Email" /><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row">
+                        <textarea type="text" class="material light" id="message" style="width:447px; max-width:100%; height: 100px;" placeholder="Message"></textarea><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row" style="padding-bottom: 20px; text-align: center;">
+                        <input type="button" class="material light raised" value="Submit" onclick="submitForm('sponsor'); return false;" />
+                        <input type="reset" class="material light raised" value="Reset" />
+                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('sponsor', document.getElementById('sponsorButton'));" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        
         <div id="main">
-            <div id="about">
+            <div id="about" class="content">
                 <div class="question">
                     <div class="query">
                         What is a hackathon?
@@ -72,7 +145,6 @@
                         Hacking is not about breaking into your school computers.
                         Hackathons are a place where students come together to work on fun projects using technology.
                         It's a great time to hangout with friends, work on something you care about, and have food paid for.
-                        Check out this blog post written by a hackathon veteran.
                     </div>
                 </div>
                 <div class="question">
@@ -93,21 +165,11 @@
                     </div>
                 </div>
             </div>
-            <div id="FAQ">
+            <div class="breaker" id="breaker1" style="background-image: url('resources/images/breakers/1.jpg');"></div>
+            <div id="FAQ" class="content">
                 <div class="question">
                     <div class="query">
-                        What's a hackathon?
-                    </div>
-                    <div class="answer">
-                        Hacking is not about breaking into your school computers.
-                        Hackathons are a place where students come together to work on fun projects using technology.
-                        It's a great time to hangout with friends, work on something you care about, and have food paid for.
-                        Check out this blog post written by a hackathon veteran.
-                    </div>
-                </div>
-                <div class="question">
-                    <div class="query">
-                        Do I need to be 1337?
+                        Do I need to know how to code?
                     </div>
                     <div class="answer">
                         TeenHacks is for beginners and experts alike.
@@ -122,8 +184,8 @@
                     </div>
                     <div class="answer">
                         All your friends, computer (laptop or desktop), school ID, phone, toiletries, sleeping bag (optional), and anything else you might need.
-                        If you have a particular hardware idea in mind, you can bring your own materials.
-                        We will have some on hand but they will be in limited supply.
+                        We will have certain hardware available, but they will be in limited supply.
+                        If you want to hack with hardware that we don't have, then you'll need to supply that.
                     </div>
                 </div>
                 <div class="question">
@@ -148,12 +210,21 @@
                 </div>
                 <div class="question">
                     <div class="query">
-                        How much does it cost?
+                        What if I don't have an idea?
                     </div>
                     <div class="answer">
-                        This event is completely free. Meals and snacks are provided the entire event.
+                        There will be plenty of other people at TarHacks that will have ideas.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="query">
+                        Surely an experience like this must be expensive?
+                    </div>
+                    <div class="answer">
+                        America is the land of the free, and TarHacks follows in that great tradition, as it is free too!
+                        Meals and snacks are provided the entire event.
                         All you need to worry about is learning and building.
-                        We'll take care of the rest. Unfortunately though, we will not be providing travel reimbursement.
+                        Unfortunately though, we will not be providing travel reimbursement.
                     </div>
                 </div>
                 <div class="question">
@@ -162,7 +233,7 @@
                     </div>
                     <div class="answer">
                         Anyone currently enrolled in high school who wants to learn or improve their skills.
-                        If you're in college (or want to help but not hack), you can also sign up to be a mentor.
+                        If you're in college (or want to help but not hack), you can also <a href="">sign up to be a mentor</a>.
                         You'll get to help out some newbies and make a great impact on their hackathon experience.
                     </div>
                 </div>
@@ -171,7 +242,7 @@
                         How will I not starve?
                     </div>
                     <div class="answer">
-                        We will be providing meals (In N Out) and snacks (those gummies and chips 'n stuff) (lots of them!)
+                        We will be providing meals (IN N OUT, Pepe's, IDK what else) and snacks (those gummies and chips 'n stuff) (loads of them!)
                     </div>
                 </div>
                 <div class="question">
@@ -188,54 +259,65 @@
                         How will projects be judged?
                     </div>
                     <div class="answer">
-                        You will demo your project to a panel of judges, then they will make decisions based on a combination of novelty, utility, design, overall coolness, and technical complexity.
+                        You will present your project to a panel of judges, then they will make decisions based on a combination of novelty, utility, design, overall coolness, and technical complexity.
+                    </div>
+                </div>
+                <div>
+                    <div class="question">
+                        <div class="query">
+                            Still have a question?
+                        </div>
+                        <div class="answer">
+                            Feel free to shoot us an email at <a href="mailto:questions@tarhacks.org">questions@tarhacks.org</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="sponsors">
+            <div class="breaker" id="breaker2" style="background-image:url('resources/images/breakers/2.jpg')"></div>
+            <div id="sponsors" class="content">
                 <div id="platinum">
                     <div class="level"><i class="mdi mdi-star-circle"></i></div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/google.png')"></div>
+                        <a href="http://google.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/google.png')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/apple.png'); height: 100px; margin-top: 40px;"></div>
+                        <a href="http://apple.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/apple.png'); height: 100px; margin-top: 40px;"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/microsoft.svg')"></div>
+                        <a href="http://microsoft.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/microsoft.svg')"></div></a>
                     </div>
                 </div>
                 <div id="gold">
                     <div class="level"><i class="mdi mdi-star-circle"></i></div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/github.png')"></div>
+                        <a href="http://github.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/github.png')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/beckman.png')"></div>
+                        <a href="http://beckmancoulter.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/beckman.png')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/namecheap.png')"></div>
+                        <a href="https://namecheap.com/" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/namecheap.png')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/oculus.png')"></div>
+                        <a href="http://oculus.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/oculus.png')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/mlh.png')"></div>
+                        <a href="http://mlh.io" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/mlh.png')"></div></a>
                     </div>
                 </div>
                 <div id="silver">
                     <div class="level"><i class="mdi mdi-star-circle"></i></div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/visage.png')"></div>
+                        <a href="http://visage.co/" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/visage.png')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/teespring.svg')"></div>
+                        <a href="http://teespring.com/" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/teespring.svg')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/wolfram.svg')"></div>
+                        <a href="http://wolfram.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/wolfram.svg')"></div></a>
                     </div>
                     <div class="sponsor">
-                        <div class="logo" style="background-image: url('/resources/images/sponsors/duckduckgo.png')"></div>
+                        <a href="http://duckduckgo.com" class="logo"><div class="logo" style="background-image: url('/resources/images/sponsors/duckduckgo.png'); height: 50px; margin-top: 25px;"></div></a>
                     </div>
                 </div>
             </div>
