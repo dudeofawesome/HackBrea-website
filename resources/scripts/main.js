@@ -93,19 +93,24 @@ function switchToFAB () {
 
 function openForm (name, sender) {
     var form = document.getElementById(name);
+//    form.style.left = sender.getBoundingClientRect().left + sender.getBoundingClientRect().width / 2;
+//    form.style.top = sender.getBoundingClientRect().top + sender.getBoundingClientRect().height / 2;
+//    form.style.transform = "scale(" + sender.getBoundingClientRect().width / form.getBoundingClientRect().width + ", " + sender.getBoundingClientRect().height / form.getBoundingClientRect().height + ")";
+    
+    form.style.opacity = 0;
+    form.style.transform = "scale(" + sender.getBoundingClientRect().width / form.getBoundingClientRect().width + ", " + sender.getBoundingClientRect().height / form.getBoundingClientRect().height + ") translate(-70px, -110px)";
     form.style.left = sender.getBoundingClientRect().left + sender.getBoundingClientRect().width / 2;
     form.style.top = sender.getBoundingClientRect().top + sender.getBoundingClientRect().height / 2;
-    form.style.transform = "scale(" + sender.getBoundingClientRect().width / form.getBoundingClientRect().width + ", " + sender.getBoundingClientRect().height / form.getBoundingClientRect().height + ")";
     
     form.style.pointerEvents = "auto";
-    TweenLite.to(form, tweenTime, {opacity: 1, transform: "scale(1, 1)", left: "50%", top: "50%"});
+    TweenLite.to(form, tweenTime, {opacity: 1, transform: "scale(1, 1) translate(0px, 0px)", left: "50%", top: "50%"});
 }
 
 function closeForm (name, sender) {
     var form = document.getElementById(name);
     
     form.style.pointerEvents = "none";
-    TweenLite.to(form, tweenTime, {opacity: 0, transform: "scale(" + sender.getBoundingClientRect().width / form.getBoundingClientRect().width + ", " + sender.getBoundingClientRect().height / form.getBoundingClientRect().height + ")", left: sender.getBoundingClientRect().left + sender.getBoundingClientRect().width / 2, top: sender.getBoundingClientRect().top + sender.getBoundingClientRect().height / 2});
+    TweenLite.to(form, tweenTime, {opacity: 0, transform: "scale(" + sender.getBoundingClientRect().width / form.getBoundingClientRect().width + ", " + sender.getBoundingClientRect().height / form.getBoundingClientRect().height + ") translate(-70px, -110px)", left: sender.getBoundingClientRect().left + sender.getBoundingClientRect().width / 2, top: sender.getBoundingClientRect().top + sender.getBoundingClientRect().height / 2});
 }
 
 function submitForm (name) {
