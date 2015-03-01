@@ -919,20 +919,21 @@ input[type=range].material {
 
 /* line 28, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 body {
-  background-color: white; }
+  background-color: white;
+  overflow-x: hidden; }
 
-/* line 32, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
-header .headerImg {
+/* line 33, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+header #headerImg {
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-image: url('/resources/images/header-wide.jpg');
+  background-image: url('/resources/images/header.jpg');
   background-size: cover;
-  background-position: 50% 50%; }
+  background-position: 50% 30%; }
 
-/* line 44, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 45, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 header #title {
   position: absolute;
   bottom: 50px;
@@ -945,17 +946,17 @@ header #title {
   font-size: 100px;
   text-align: center; }
 
-/* line 58, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 59, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 body {
   font-family: "roboto", sans-serif; }
 
-/* line 62, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 63, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 header {
   width: 100%;
   height: 100%;
   display: block; }
 
-/* line 68, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 69, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main {
   display: block;
   position: absolute;
@@ -969,19 +970,19 @@ header {
   background-color: #fafafa;
   box-shadow: 0px 0px 200px 20px black; }
 
-/* line 83, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 84, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main * {
   padding-bottom: 15px; }
 
-/* line 87, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 88, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #about {
   text-align: center; }
 
-/* line 91, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 92, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main > #about {
   margin-top: 15px; }
 
-/* line 95, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 96, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #about:before {
   position: relative;
   top: -25px;
@@ -995,39 +996,39 @@ header {
   font-size: 50px;
   content: 'About'; }
 
-/* line 110, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 111, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #about .question {
   display: inline-block;
   padding: 15px;
   width: 300px;
   vertical-align: top; }
 
-/* line 117, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 118, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #about .question .query {
   display: block;
   padding-bottom: 10px;
   font-size: 20px; }
 
-/* line 124, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 125, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #about .question .answer {
   display: block;
   font-size: 1em; }
 
-/* line 130, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 131, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #FAQ {
   text-align: center; }
 
-/* line 134, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 135, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main > .content {
   line-height: 0.1em;
   border-top: 3px solid #115e43;
   margin: 30px 50px 10px 50px; }
 
-/* line 140, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 141, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main .content * {
   line-height: 1em; }
 
-/* line 144, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 145, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #FAQ:before {
   position: relative;
   top: -25px;
@@ -1041,35 +1042,35 @@ header {
   font-size: 50px;
   content: 'FAQ'; }
 
-/* line 159, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 160, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #FAQ .question {
   display: inline-block;
   padding: 15px;
   width: 300px;
   vertical-align: top; }
 
-/* line 166, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 167, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #FAQ .question .query {
   display: block;
   padding-bottom: 10px;
   font-size: 20px; }
 
-/* line 173, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 174, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #FAQ .question .answer {
   display: block;
   font-size: 1em; }
 
-/* line 179, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 180, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #sponsors {
   display: block;
   text-align: center; }
 
-/* line 184, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 185, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #sponsors div * {
   display: inline-block;
   padding-top: 15px; }
 
-/* line 189, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 190, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main #sponsors:before {
   position: relative;
   top: -25px;
@@ -1083,28 +1084,28 @@ header {
   font-size: 50px;
   content: 'Sponsors'; }
 
-/* line 207, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 208, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors div .level {
   font-size: 50px; }
 
-/* line 211, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 212, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #platinum .level {
   padding-bottom: 55px;
   color: gold;
   font-size: 80px; }
 
-/* line 217, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 218, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #gold .level {
   padding-bottom: 28px;
   color: silver;
   font-size: 60px; }
 
-/* line 223, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 224, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #silver .level {
   padding-bottom: 6px;
   color: #cd7f32; }
 
-/* line 228, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 229, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors div .level:after {
   position: relative;
   left: 15px;
@@ -1112,43 +1113,43 @@ header {
   color: #499379;
   content: '{'; }
 
-/* line 237, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 238, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #platinum .level:after {
   top: 23px;
   font-size: 150px; }
 
-/* line 242, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 243, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #gold .level:after {
   top: 18px;
   font-size: 140px; }
 
-/* line 247, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 248, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #silver .level:after {
   top: 18px;
   font-size: 130px; }
 
-/* line 260, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 261, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #platinum .sponsor {
   width: 300px;
   height: 200px; }
 
-/* line 265, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 266, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #gold .sponsor {
   width: 200px;
   height: 150px; }
 
-/* line 270, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 271, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors #silver .sponsor {
   width: 200px;
   height: 100px; }
 
-/* line 275, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 276, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors .sponsor {
   text-align: center;
   vertical-align: bottom;
   padding: 20px; }
 
-/* line 281, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 282, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #sponsors .sponsor .logo {
   width: 100%;
   height: 100%;
@@ -1156,13 +1157,13 @@ header {
   background-position: center;
   background-repeat: no-repeat; }
 
-/* line 289, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 290, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 footer {
   padding: 15px;
   margin-top: 150px;
   text-align: center; }
 
-/* line 295, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 296, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 header #downArrow {
   position: absolute;
   top: 500px;
@@ -1175,18 +1176,18 @@ header #downArrow {
   font-size: 50px;
   text-align: center; }
 
-/* line 309, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 310, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 header #downArrow i {
   position: relative;
   top: -19px;
   left: -16px; }
 
-/* line 315, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 316, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 header #title .text {
   margin-bottom: 50px;
   text-shadow: 0px 10px 50px rgba(0, 0, 0, 0.9); }
 
-/* line 320, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 321, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 header #title .text img {
   margin-left: 10px;
   margin-right: 10px;
@@ -1196,7 +1197,7 @@ header #title .text img {
   border-radius: 150px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); }
 
-/* line 330, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 331, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #floatingUpArrow {
   display: none;
   position: fixed;
@@ -1211,13 +1212,13 @@ header #title .text img {
   text-align: center;
   transition: transform 0.5s; }
 
-/* line 347, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 348, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #floatingUpArrow i {
   position: relative;
   top: -19px;
   left: -16px; }
 
-/* line 353, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 354, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form {
   position: absolute;
   top: 50%;
@@ -1239,98 +1240,102 @@ header #title .text img {
   line-height: 0.2;
   text-align: center; }
 
-/* line 376, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 377, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form label {
   font-size: 15px; }
 
-/* line 380, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 381, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .radioBoxGroup {
   display: inline-block;
   line-height: 0;
   text-align: left; }
 
-/* line 386, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 387, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .radioBoxGroup input {
   padding: 0px;
   margin: 0px; }
 
-/* line 391, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 392, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row {
   text-align: left;
   margin-left: 250px;
   margin-right: 250px; }
 
-/* line 397, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 398, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row .cell {
   display: inline-block;
   text-align: left;
   vertical-align: middle; }
 
-/* line 403, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 404, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row input[type="text"], .form .row input[type="email"], .form .row input[type="url"], .form .row input[type="number"] {
   width: 220px; }
 
-/* line 407, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 408, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(0) {
   z-index: 9; }
 
-/* line 411, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 412, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(1) {
   z-index: 8; }
 
-/* line 415, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 416, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(2) {
   z-index: 7; }
 
-/* line 419, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 420, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(3) {
   z-index: 6; }
 
-/* line 423, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 424, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(4) {
   z-index: 5; }
 
-/* line 427, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 428, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(5) {
   z-index: 4; }
 
-/* line 431, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 432, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(6) {
   z-index: 3; }
 
-/* line 435, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 436, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(7) {
   z-index: 2; }
 
-/* line 439, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 440, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 .form .row:nth-of-type(8) {
   z-index: 1; }
 
-/* line 443, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 444, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #social {
   position: absolute;
   top: 20px;
   left: 20px;
   z-index: 5; }
 
-/* line 450, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 451, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #social i {
   font-size: 50px;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   transition: color 0.5s; }
 
-/* line 458, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 459, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #social i:hover {
   color: rgba(255, 255, 255, 0.7); }
 
-/* line 462, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+/* line 463, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
 #main .breaker {
   height: 500px;
   background-position: center;
   background-size: cover;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: 0px -5px 30px 0px rgba(0, 0, 0, 0.4) inset;
   margin-left: -20px;
   margin-right: -20px; }
+
+/* line 472, /Users/dudeofawesome/Github/HackBrea-website/resources/styles/main.scss */
+.question .query i {
+  margin-bottom: -12px; }
 
 /*# sourceMappingURL=main.css.map */

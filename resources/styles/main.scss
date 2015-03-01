@@ -27,18 +27,19 @@
 
 body {
     background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 
-header .headerImg {
+header #headerImg {
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
     
-    background-image: url('/resources/images/header-wide.jpg');
+    background-image: url('/resources/images/header.jpg');
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 30%;
 }
 
 header #title {
@@ -463,7 +464,11 @@ header #title .text img {
     height: 500px;
     background-position: center;
     background-size: cover;
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0px -5px 30px 0px rgba(0, 0, 0, 0.4) inset;
     margin-left: -20px;
     margin-right: -20px;
+}
+
+.question .query i {
+    margin-bottom: -12px;
 }
