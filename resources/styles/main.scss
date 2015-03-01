@@ -66,6 +66,10 @@ header {
     display: block;
 }
 
+a {
+	color: $secondary-1-1;
+}
+
 #main {
     display: block;
     position: absolute;
@@ -75,6 +79,7 @@ header {
     z-index: 2;
     margin-top: 20px;
     padding-top: 20px;
+	overflow-x: hidden;
     
     border-top: 2px solid $secondary-1-1;
     background-color: rgb(250, 250, 250);
@@ -209,24 +214,24 @@ header {
     font-size: 50px;
 }
 
-#sponsors #platinum .level {
+#sponsors #gold .level {
     padding-bottom: 55px;
     color: gold;
     font-size: 80px;
 }
 
-#sponsors #gold .level {
+#sponsors #silver .level {
     padding-bottom: 28px;
     color: silver;
     font-size: 60px;
 }
 
-#sponsors #silver .level {
+#sponsors #bronze .level {
     padding-bottom: 6px;
     color: rgb(205, 127, 50);
 }
 
-#sponsors div .level:after {
+#sponsors div .level::after {
     position: relative;
     left: 15px;
     padding-right: 5px;
@@ -235,41 +240,50 @@ header {
     content: '{';
 }
 
-#sponsors #platinum .level:after {
+#sponsors .sponsor:last-child::after {
+    position: absolute;
+    right: -15px;
+    
+    color: $secondary-1-1;
+    font-size: 50px;
+    content: '}';
+}
+
+#sponsors #gold .level:after {
     top: 23px;
     font-size: 150px;
 }
 
-#sponsors #gold .level:after {
+#sponsors #silver .level:after {
     top: 18px;
     font-size: 140px;
 }
 
-#sponsors #silver .level:after {
+#sponsors #bronze .level:after {
     top: 18px;
     font-size: 130px;
-}
-
-#sponsors #gold {
-    
 }
 
 #sponsors #silver {
     
 }
 
-#sponsors #platinum .sponsor {
+#sponsors #bronze {
+    
+}
+
+#sponsors #gold .sponsor {
     width: 300px;
     height: 200px;
 }
 
-#sponsors #gold .sponsor {
+#sponsors #silver .sponsor {
     width: 200px;
     height: 150px;
 }
 
-#sponsors #silver .sponsor {
-    width: 200px;
+#sponsors #bronze .sponsor {
+    width: 150px;
     height: 100px;
 }
 
