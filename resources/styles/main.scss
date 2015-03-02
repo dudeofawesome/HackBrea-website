@@ -212,29 +212,63 @@ a {
     font-size: 50px;
     content: 'Sponsors';
 }
-#sponsors #platinum {
-    
+
+#sponsors #gold .closingBrace {
+    position: relative;
+    top: 13px;
+    font-size: 150px;
+    color: $secondary-1-1;
+}
+
+#sponsors #silver .closingBrace {
+    position: relative;
+    top: 10px;
+    font-size: 140px;
+    color: $secondary-1-1;
+}
+
+#sponsors #bronze .closingBrace {
+    position: relative;
+    top: 10px;
+    font-size: 130px;
+    color: $secondary-1-1;
 }
 
 #sponsors div .level {
-    font-size: 50px;
+    
+}
+
+#sponsors div .sponsor::after {
+    content: ",";
+    float: right;
+    position: relative;
+    left: 20px;
+    top: -45px;
+    
+    font-size: 70px;
+    color: $secondary-1-1;
+}
+
+#sponsors div .sponsor.last::after {
+    content: " ";
 }
 
 #sponsors #gold .level {
     padding-bottom: 55px;
     color: gold;
-    font-size: 80px;
+    font-size: 100px;
 }
 
 #sponsors #silver .level {
-    padding-bottom: 28px;
+    padding-bottom: 32px;
     color: silver;
-    font-size: 60px;
+    font-size: 90px;
 }
 
 #sponsors #bronze .level {
     padding-bottom: 6px;
     color: rgb(205, 127, 50);
+    font-size: 80px;
 }
 
 #sponsors div .level::after {
@@ -243,59 +277,43 @@ a {
     padding-right: 5px;
     
     color: $secondary-1-1;
-    content: '{';
-}
-
-#sponsors .sponsor:last-child::after {
-    position: absolute;
-    right: -15px;
-    
-    color: $secondary-1-1;
-    font-size: 50px;
-    content: '}';
+    content: '= {';
 }
 
 #sponsors #gold .level:after {
-    top: 23px;
+    top: 13px;
     font-size: 150px;
 }
 
 #sponsors #silver .level:after {
-    top: 18px;
+    top: 10px;
     font-size: 140px;
 }
 
 #sponsors #bronze .level:after {
-    top: 18px;
+    top: 10px;
     font-size: 130px;
-}
-
-#sponsors #silver {
-    
-}
-
-#sponsors #bronze {
-    
 }
 
 #sponsors #gold .sponsor {
     width: 300px;
-    height: 200px;
+    height: 100px;
 }
 
 #sponsors #silver .sponsor {
     width: 200px;
-    height: 150px;
+    height: 66px;
 }
 
 #sponsors #bronze .sponsor {
     width: 150px;
-    height: 100px;
+    height: 50px;
 }
 
 #sponsors .sponsor {
     text-align: center;
-    vertical-align: bottom;
+    vertical-align: top;
+    margin-top: 20px;
     padding: 20px;
 }
 
