@@ -30,9 +30,8 @@ function onload () {
     setSlowScroll(document.getElementById("headerImg"));
     breakers = [document.getElementById("breaker1"), document.getElementById("breaker2")];
     
+    recalculatePositions();
     var fixedFAB = document.getElementById("downArrow");
-    var pos = fixedFAB.getBoundingClientRect();
-    originalPos = {right:window.innerWidth - (pos.left + pos.width), bottom:window.innerHeight - (pos.top + pos.height)};
     specialScrolls.push({applyTo:fixedFAB, onscroll:function (scroll) {
         if (this.applyTo.getBoundingClientRect().top < 0) {
             switchToFAB();
@@ -40,6 +39,16 @@ function onload () {
             switchToFAB();
         }
     }});
+}
+
+
+window.onresize = function () {
+    recalculatePositions();
+}
+
+function recalculatePositions () {
+    var pos = document.getElementById("downArrow").getBoundingClientRect();
+    originalPosFAB = {right:window.innerWidth - (pos.left + pos.width), bottom:window.innerHeight - (pos.top + pos.height)};
 }
 
 function scrollToTopOfContent () {
@@ -58,7 +67,7 @@ function scrollToTopOfPage () {
 
 var tweenTime = 0.3;
 
-var originalPos;
+var originalPosFAB;
 function switchToFAB () {
     var FAB = document.getElementById("floatingUpArrow");
     var fixedFAB = document.getElementById("downArrow");
@@ -81,8 +90,8 @@ function switchToFAB () {
         FAB.style.transform = "scale(1.3) rotateZ(0deg)";
 
         TweenLite.to(FAB, 0.5, {
-            right: originalPos.right - 15 + "px",
-            bottom: originalPos.bottom - 7 + "px",
+            right: originalPosFAB.right - 15 + "px",
+            bottom: originalPosFAB.bottom - 7 + "px",
             onComplete: function () {
                 FAB.style.display = "none";
                 fixedFAB.style.display = "block";
@@ -140,11 +149,17 @@ function checkInputForErrors (name) {
                 fName.setAttribute("error", "");
                 fName.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                fName.removeAttribute("error");
+                fName.nextSibling.innerHTML = "We're all good";
             }
             if (lName.value === "") {
                 lName.setAttribute("error", "");
                 lName.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                lName.removeAttribute("error");
+                lName.nextSibling.innerHTML = "We're all good";
             }
             if (email.value === "") {
                 email.setAttribute("error", "");
@@ -154,16 +169,25 @@ function checkInputForErrors (name) {
                 email.setAttribute("error", "");
                 email.nextSibling.innerHTML = "Please enter a valid email";
                 hasError = true;
+            } else {
+                email.removeAttribute("error");
+                email.nextSibling.innerHTML = "We're all good";
             }
             if (github.value === "") {
                 github.setAttribute("error", "");
                 github.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                github.removeAttribute("error");
+                github.nextSibling.innerHTML = "We're all good";
             }
             if (school.value === "") {
                 school.setAttribute("error", "");
                 school.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                school.removeAttribute("error");
+                school.nextSibling.innerHTML = "We're all good";
             }
             if (age.value === "") {
                 age.setAttribute("error", "");
@@ -173,11 +197,17 @@ function checkInputForErrors (name) {
                 age.setAttribute("error", "");
                 age.nextSibling.innerHTML = "You must be in high school to attend";
                 hasError = true;
+            } else {
+                age.removeAttribute("error");
+                age.nextSibling.innerHTML = "We're all good";
             }
             if (skills.value === "") {
                 skills.setAttribute("error", "");
                 skills.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                skills.removeAttribute("error");
+                skills.nextSibling.innerHTML = "We're all good";
             }
             break;
         case "volunteer":
@@ -192,11 +222,17 @@ function checkInputForErrors (name) {
                 fName.setAttribute("error", "");
                 fName.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                fName.removeAttribute("error");
+                fName.nextSibling.innerHTML = "We're all good";
             }
             if (lName.value === "") {
                 lName.setAttribute("error", "");
                 lName.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                lName.removeAttribute("error");
+                lName.nextSibling.innerHTML = "We're all good";
             }
             if (email.value === "") {
                 email.setAttribute("error", "");
@@ -206,20 +242,45 @@ function checkInputForErrors (name) {
                 email.setAttribute("error", "");
                 email.nextSibling.innerHTML = "Please enter a valid email";
                 hasError = true;
+            } else {
+                email.removeAttribute("error");
+                email.nextSibling.innerHTML = "We're all good";
+            }
+            if (github.value === "") {
+                github.setAttribute("error", "");
+                github.nextSibling.innerHTML = "Can not be blank";
+                hasError = true;
+            } else {
+                github.removeAttribute("error");
+                github.nextSibling.innerHTML = "We're all good";
+            }
+            if (school.value === "") {
+                school.setAttribute("error", "");
+                school.nextSibling.innerHTML = "Can not be blank";
+                hasError = true;
+            } else {
+                school.removeAttribute("error");
+                school.nextSibling.innerHTML = "We're all good";
             }
             if (age.value === "") {
                 age.setAttribute("error", "");
                 age.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
-            } else if (age.value < 18) {
+            } else if (age.value < 13) {
                 age.setAttribute("error", "");
-                age.nextSibling.innerHTML = "You must be in over 18 to volunteer";
+                age.nextSibling.innerHTML = "You must be in high school to attend";
                 hasError = true;
+            } else {
+                age.removeAttribute("error");
+                age.nextSibling.innerHTML = "We're all good";
             }
             if (skills.value === "") {
                 skills.setAttribute("error", "");
                 skills.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                skills.removeAttribute("error");
+                skills.nextSibling.innerHTML = "We're all good";
             }
             break;
         case "sponsor":
@@ -230,20 +291,21 @@ function checkInputForErrors (name) {
             var message = document.getElementById("message");
 
 
-            if (cName.value === "") {
-                cName.setAttribute("error", "");
-                cName.nextSibling.innerHTML = "Can not be blank";
-                hasError = true;
-            }
             if (fName.value === "") {
                 fName.setAttribute("error", "");
                 fName.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                fName.removeAttribute("error");
+                fName.nextSibling.innerHTML = "We're all good";
             }
             if (lName.value === "") {
                 lName.setAttribute("error", "");
                 lName.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                lName.removeAttribute("error");
+                lName.nextSibling.innerHTML = "We're all good";
             }
             if (email.value === "") {
                 email.setAttribute("error", "");
@@ -253,11 +315,45 @@ function checkInputForErrors (name) {
                 email.setAttribute("error", "");
                 email.nextSibling.innerHTML = "Please enter a valid email";
                 hasError = true;
+            } else {
+                email.removeAttribute("error");
+                email.nextSibling.innerHTML = "We're all good";
             }
-            if (message.value === "") {
-                message.setAttribute("error", "");
-                message.nextSibling.innerHTML = "Can not be blank";
+            if (github.value === "") {
+                github.setAttribute("error", "");
+                github.nextSibling.innerHTML = "Can not be blank";
                 hasError = true;
+            } else {
+                github.removeAttribute("error");
+                github.nextSibling.innerHTML = "We're all good";
+            }
+            if (school.value === "") {
+                school.setAttribute("error", "");
+                school.nextSibling.innerHTML = "Can not be blank";
+                hasError = true;
+            } else {
+                school.removeAttribute("error");
+                school.nextSibling.innerHTML = "We're all good";
+            }
+            if (age.value === "") {
+                age.setAttribute("error", "");
+                age.nextSibling.innerHTML = "Can not be blank";
+                hasError = true;
+            } else if (age.value < 13) {
+                age.setAttribute("error", "");
+                age.nextSibling.innerHTML = "You must be in high school to attend";
+                hasError = true;
+            } else {
+                age.removeAttribute("error");
+                age.nextSibling.innerHTML = "We're all good";
+            }
+            if (skills.value === "") {
+                skills.setAttribute("error", "");
+                skills.nextSibling.innerHTML = "Can not be blank";
+                hasError = true;
+            } else {
+                skills.removeAttribute("error");
+                skills.nextSibling.innerHTML = "We're all good";
             }
             break;
     }

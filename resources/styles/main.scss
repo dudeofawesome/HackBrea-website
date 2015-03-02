@@ -76,6 +76,10 @@ a {
     }
 }
 
+textarea {
+    resize: none;
+}
+
 #main {
     display: block;
     position: absolute;
@@ -119,21 +123,22 @@ a {
     content: 'About';
 }
 
-#main #about .question {
+#main div .question {
     display: inline-block;
     padding: 15px;
     width: 300px;
+    max-width: 100%;
     vertical-align: top;
 }
 
-#main #about .question .query {
+#main div .question .query {
     display: block;
     padding-bottom: 10px;
     
     font-size: 20px;
 }
 
-#main #about .question .answer {
+#main div .question .answer {
     display: block;
     
     font-size: 1em;
@@ -166,26 +171,6 @@ a {
     background-color: #fafafa;
     font-size: 50px;
     content: 'FAQ';
-}
-
-#main #FAQ .question {
-    display: inline-block;
-    padding: 15px;
-    width: 300px;
-    vertical-align: top;
-}
-
-#main #FAQ .question .query {
-    display: block;
-    padding-bottom: 10px;
-    
-    font-size: 20px;
-}
-
-#main #FAQ .question .answer {
-    display: block;
-    
-    font-size: 1em;
 }
 
 #main #sponsors {
@@ -366,6 +351,27 @@ header #title .text img {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+header #registerButton {
+    font-size: 50px;
+    height: 83px;
+    position: relative;
+    top: -80px;
+} 
+
+header #volunteerButton {
+    font-size: 40px;
+    height: 83px;
+    position: relative;
+    top: -50px;
+} 
+
+header #sponsorButton {
+    font-size: 40px;
+    height: 83px;
+    position:relative;
+    top: -50px;
+} 
+
 #floatingUpArrow {
     display: none;
     position: fixed;
@@ -412,25 +418,42 @@ header #title .text img {
     text-align: center;
 }
 
+.form form {
+    width: 445px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+.form form .header {
+    font-size: 50px;
+    color: black;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
 .form label {
     font-size: 15px;
 }
 
 .form .radioBoxGroup {
-    display:inline-block;
+    display: block;
+    margin-left: 10px;
     line-height: 0;
     text-align: left;
 }
 
 .form .radioBoxGroup input {
     padding: 0px;
-    margin: 0px;
+    margin: 10px 10px -2px 0px;
 }
 
 .form .row {
     text-align: left;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-bottom: 5px;
+    width: 100%;
 }
 
 .form .row .cell {
@@ -439,8 +462,12 @@ header #title .text img {
     vertical-align: middle;
 }
 
-.form .row input[type="text"], .form .row input[type="email"], .form .row input[type="url"], .form .row input[type="number"] {
+.form .row .cell {
     width: 220px;
+}
+
+.form .row .cell > * {
+    width: 210px;
 }
 
 .form .row:nth-of-type(0) {
@@ -509,4 +536,71 @@ header #title .text img {
 
 .question .query i {
     margin-bottom: -12px;
+}
+
+
+
+
+
+
+
+@media (max-width: 799px) {
+    header #title {
+        left: 50%;
+        width: 500px;
+        margin-left: -250px;
+        margin-right: auto;
+    }
+    header #title .text {
+        width: 500px;
+        margin-bottom: 50px;
+        text-shadow: 0px 10px 50px rgba(0, 0, 0, 0.9);
+    }
+
+    header #title .text img {
+        position: relative;
+        top: 25px;
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    
+    header #downArrow {
+        top: 630px;
+    }
+}
+@media (max-width: 499px) {
+    header #title .text img {
+        display: flex;
+        position: relative;
+        top: -8px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 0px;
+    }
+    
+    header #volunteerButton, header #sponsorButton {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    header #registerButton {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        left: 12px;
+        right: 0px;
+        top: -87px;
+    }
+    
+    header #downArrow {
+        top: 770px;
+    }
+}
+@media (max-width: 430px) {
+    #main div .question {
+        padding: 0px;
+    }
 }
