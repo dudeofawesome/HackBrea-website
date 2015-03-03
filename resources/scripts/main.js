@@ -124,12 +124,12 @@ function closeForm (name, sender) {
 
 function submitForm (name) {
     if (checkInputForErrors(name)) {
+//        alert("We're not currently applications.");
+//        return;
+        
+        
+        
         // TODO: AJAX the data to the server
-        alert("We're not currently applications.");
-        return;
-        
-        
-        
         var xmlhttp;
         if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -138,12 +138,38 @@ function submitForm (name) {
         }
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                alter(xmlhttp.responseText);
+                alert(xmlhttp.responseText);
             }
         }
         xmlhttp.open("POST","/actions/signup.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("fname=Henry&lname=Ford");
+        var fName = document.getElementById("fName");
+        var lName = document.getElementById("lName");
+        var email = document.getElementById("email");
+        var github = document.getElementById("github");
+        var school = document.getElementById("school");
+        var grade = {};
+        if (document.getElementById("gradeFreshman").checked)
+            grade.value = "freshman";
+        else if (document.getElementById("gradeSophomore").checked)
+            grade.value = "sophomore";
+        else if (document.getElementById("gradeJunior").checked)
+            grade.value = "junior";
+        else if (document.getElementById("gradeSenior").checked)
+            grade.value = "senior";
+        var age = document.getElementById("age");
+        var gender = {};
+        if (document.getElementById("genderMale").checked)
+            gender.value = "male";
+        else if (document.getElementById("genderFemale").checked)
+            gender.value = "female";
+        else if (document.getElementById("genderOther").checked)
+            gender.value = "other";
+        else if (document.getElementById("genderPNS").checked)
+            gender.value = "pns";
+        var food = document.getElementById("food");
+        var skills = document.getElementById("skills");
+        xmlhttp.send("fName=" + fName.value + "&lName=" + lName.value + "&email=" + email.value + "&github=" + github.value + "&school=" + school.value + "&grade=" + grade.value + "&age=" + age.value + "&food=" + food.value + "&gender=" + gender.value + "&skills=" + skills.value);
     }
 }
 
