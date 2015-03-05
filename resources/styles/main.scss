@@ -506,6 +506,11 @@ header #sponsorButton {
     z-index: 1;
 }
 
+.form .responseMessage {
+  font-size: 250px;
+  color: $secondary-1-1;
+}
+
 #social {
     position: absolute;
     top: 20px;
