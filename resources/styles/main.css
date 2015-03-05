@@ -1217,23 +1217,23 @@ header #sponsorButton {
     margin-bottom: 0px; }
     header #title .text {
       line-height: 0.9;
-      margin-bottom: 60px; }
+      margin-bottom: 0px; }
 
-  header #sponsorButton {
-    height: 54px;
-    font-size: 30px; }
-
-  header #volunteerButton {
-    height: 54px;
-    font-size: 30px; }
+  header #sponsorButton, header #volunteerButton {
+    display: inline;
+    top: -40px;
+    height: 45px;
+    font-size: 14px;
+    margin: 0px; }
 
   header #registerButton {
     top: -100px;
+    width: 213px;
     height: 68px;
     font-size: 35px; }
 
   header #downArrow {
-    top: 410px; }
+    top: 370px; }
 
   #social {
     top: 20px;
@@ -1248,6 +1248,9 @@ header #sponsorButton {
       position: absolute;
       right: 0px;
       bottom: 0px; }
+
+  #main {
+    margin-top: 0px; }
 
   #main div .question {
     padding: 0px; }
