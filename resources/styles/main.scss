@@ -265,17 +265,17 @@ textarea {
     content: '= {';
 }
 
-#sponsors #gold .level:after {
+#sponsors #gold .level::after {
     top: 13px;
     font-size: 150px;
 }
 
-#sponsors #silver .level:after {
+#sponsors #silver .level::after {
     top: 10px;
     font-size: 140px;
 }
 
-#sponsors #bronze .level:after {
+#sponsors #bronze .level::after {
     top: 10px;
     font-size: 130px;
 }
@@ -300,6 +300,7 @@ textarea {
     vertical-align: top;
     margin-top: 20px;
     padding: 20px;
+    max-width: 100%;
 }
 
 #sponsors .sponsor .logo {
@@ -664,6 +665,37 @@ header #sponsorButton {
 
     #main .breaker {
         height: 150px;
+    }
+
+    #sponsors div .level {
+        display: block !important;
+        margin-top: 55px;
+        margin-bottom: -90px;
+    }
+
+    #sponsors #gold .sponsor {
+        padding: 0px 0px 40px 0px;
+    }
+
+    #sponsors #silver .sponsor {
+        height: 45px;
+    }
+
+    #sponsors #bronze .sponsor {
+        width: 40%;
+        padding: 10px 10px 0px 10px;
+    }
+
+    #sponsors div .level::after {
+        display: none;
+    }
+
+    #sponsors div .sponsor::after {
+        display: none;
+    }
+
+    #sponsors .closingBrace {
+        display: none !important;
     }
 
     footer {
