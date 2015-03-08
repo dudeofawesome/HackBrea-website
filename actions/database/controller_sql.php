@@ -114,7 +114,7 @@
 
     function isEmail ($email) {
         // return (strlen($email) >= 5 && email.split("@").length == 2 && email.split(".").length == 2 && email.indexOf("@") < email.indexOf(".") - 1 && email.indexOf("@") != 0 && email.indexOf(".") != email.length - 1);
-        return (strlen($email) >= 5 && count(explode("@", $email)) == 2 && count(explode(".", $email)) == 2 && strpos($email, "@") < strpos($email, ".") - 1 && strpos($email, "@") != 0 && strpos($email, ".") != strlen($email) - 1);
+        return (strlen($email) >= 5 && strrpos(" ", $email) === false && count(explode("@", $email)) == 2 && count(explode(".", $email)) == 2 && strpos($email, "@") < strpos($email, ".") - 1 && strpos($email, "@") != 0 && strpos($email, ".") != strlen($email) - 1);
     }
 
     function sendEmail ($from, $address, $subject, $message) {
