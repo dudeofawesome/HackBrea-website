@@ -66,8 +66,10 @@ header {
     display: block;
 }
 
-a {
+a, .a {
+    text-decoration: underline;
 	color: $secondary-1-1;
+    cursor: pointer;
     
     transition: color 0.3s;
     
@@ -171,6 +173,25 @@ textarea {
     background-color: #fafafa;
     font-size: 50px;
     content: 'FAQ';
+}
+
+#main #schedule {
+    text-align: center;
+}
+
+#main #schedule:before {
+    position: relative;
+    top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    width: 265px;
+    height: 50px;
+    display: block;
+    
+    background-color: #fafafa;
+    font-size: 50px;
+    content: 'Schedule';
 }
 
 #main #sponsors {

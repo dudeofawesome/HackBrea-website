@@ -777,10 +777,12 @@ header {
   height: 100%;
   display: block; }
 
-a {
+a, .a {
+  text-decoration: underline;
   color: #499379;
+  cursor: pointer;
   transition: color 0.3s; }
-  a:hover {
+  a:hover, .a:hover {
     color: black; }
 
 textarea {
@@ -862,15 +864,28 @@ textarea {
   font-size: 50px;
   content: 'FAQ'; }
 
+#main #schedule {
+  text-align: center; }
+
+#main #schedule:before {
+  position: relative;
+  top: -25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+  width: 265px;
+  height: 50px;
+  display: block;
+  background-color: #fafafa;
+  font-size: 50px;
+  content: 'Schedule'; }
+
 #main #sponsors {
   display: block;
   text-align: center; }
 
 #main #sponsors div * {
   display: inline-block; }
-
-#main #sponsors div .level {
-  width: 240px; }
 
 #main #sponsors:before {
   position: relative;
