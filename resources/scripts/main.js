@@ -37,7 +37,12 @@ function onload () {
     smoothScroll.init();
     
     setFastScroll(document.getElementById("title"));
-    setSlowScroll(document.getElementById("headerImg"));
+//    setSlowScroll(document.getElementById("headerImg"));
+    specialScrolls.push({applyTo:document.getElementById("headerImg"), onscroll:function (scroll) {
+        if (!window.mobilecheck()) {
+            this.applyTo.style.backgroundPositionY = ((window.scrollY / window.innerHeight) * 100) + 30 + "%";
+	    }
+    }});
     breakers = [document.getElementById("breaker1"), document.getElementById("breaker2")];
     
     recalculatePositions();
