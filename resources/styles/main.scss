@@ -277,7 +277,11 @@ textarea {
 }
 
 #main #schedule>.events>.event>.icon>i {
-    padding: 2px 0px 0px 1px;
+    padding: 0px 0px 0px 1px;
+}
+
+#main #schedule>.events>.event>.icon>i.food {
+    padding: 0px 0px 0px 1px;
 }
 
 #main #schedule>.events>.event:nth-child(even) {
@@ -295,11 +299,12 @@ textarea {
         
         &::before {
             position: relative;
-            left: -40px;
+            top: 0px;
+            left: -35px;
             width: 0; 
             height: 0; 
             border-top: 2px solid transparent;
-            border-bottom: 2px solid transparent; 
+            border-bottom: 3px solid transparent; 
 
             border-right:30px solid $complement;
             
@@ -320,11 +325,12 @@ textarea {
         
         &::after {
             position: relative;
+            top: 0px;
             right: -40px;
             width: 0; 
             height: 0; 
             border-top: 2px solid transparent;
-            border-bottom: 2px solid transparent; 
+            border-bottom: 3px solid transparent; 
 
             border-left:30px solid $secondary-1-1;
             
@@ -348,11 +354,12 @@ textarea {
         
         &::after {
             position: relative;
+            top: 0px;
             right: -40px;
             width: 0; 
             height: 0; 
             border-top: 2px solid transparent;
-            border-bottom: 2px solid transparent; 
+            border-bottom: 3px solid transparent; 
 
             border-left:30px solid $complement;
             
@@ -372,11 +379,12 @@ textarea {
         
         &::before {
             position: relative;
-            left: -40px;
+            top: 0px;
+            left: -35px;
             width: 0; 
             height: 0; 
             border-top: 2px solid transparent;
-            border-bottom: 2px solid transparent; 
+            border-bottom: 3px solid transparent; 
 
             border-right:30px solid $secondary-1-1;
             

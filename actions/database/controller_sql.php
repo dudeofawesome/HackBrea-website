@@ -63,7 +63,7 @@
 
         $sql->execute();
         
-        sendEmail ($fName . " " . $lName, $email, "New Volunteer", "They are a " . $age . " year old " . $gender . "\nTheir skills: " . $skills . "\nThey have the following dietary restrictions: " . $food);
+        sendEmail ($fName . "_" . $lName, $email, "New Volunteer", "They are a " . $age . " year old " . $gender . "\nTheir skills: " . $skills . "\nThey have the following dietary restrictions: " . $food);
         
         return "success";
     }
@@ -93,7 +93,7 @@
 
         $sql->execute();
 
-        sendEmail ($fName . " " . $lName, $email, "Sponsorship Opportunity from " . $cName, $message);
+        sendEmail ($fName . "_" . $lName, $email, "Sponsorship Opportunity from " . $cName, $message);
         
         return "success";
     }
