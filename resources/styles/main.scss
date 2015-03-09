@@ -31,7 +31,7 @@ body {
 }
 
 header #headerImg {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -47,7 +47,7 @@ header #title {
     bottom: 50px;
     left: 50%;
     width: 780px;
-    margin-left: -375px;
+    margin-left: -390px;
     margin-top: -50px;
     z-index: 2;
     
@@ -192,6 +192,197 @@ textarea {
     background-color: #fafafa;
     font-size: 50px;
     content: 'Schedule';
+}
+
+#main #schedule>.timeline {
+    display: block;
+    position: relative;
+    top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    width: 5px;
+    height: 930px;
+    
+    background-color: $secondary-1-1;
+    font-size: 50px;
+    content: '';
+}
+
+#main #schedule>.timeline::before, #main #schedule>.timeline::after {
+    display: block;
+    position: absolute;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 16px;
+    
+    background-color: $secondary-1-1;
+    content: '';
+}
+
+#main #schedule>.timeline::before {
+    top: -3px;
+}
+
+#main #schedule>.timeline::after {
+    bottom: -3px;
+}
+
+#main #schedule>.event {
+    
+}
+
+#main #schedule>.events {
+    margin-top: -1005px;
+}
+
+#main #schedule>.events>.event {
+    width: 100%;
+    margin: 40px
+}
+
+#main #schedule>.events>.event>* {
+    display: inline;
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#main #schedule>.events>.event>.icon {
+    display: block;
+    right: 50%;
+    margin-top: -8px;
+    margin-left: 2px;
+    margin-right: -22px;
+    padding: 5px 0px 0px 0px;
+    width: 40px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: $secondary-1;
+    border: 2px solid rgb(250, 250, 250);
+    color: white;
+    font-size: 25px;
+    z-index: 2;
+}
+
+#main #schedule>.events>.event>.time {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+#main #schedule>.events>.event>.name {
+    margin-top: 0px;
+    font-size: 15px;
+}
+
+#main #schedule>.events>.event>.icon>i {
+    padding: 2px 0px 0px 1px;
+}
+
+#main #schedule>.events>.event:nth-child(even) {
+    & >.time {
+        margin-top: 0px;
+        left: 50%;
+        margin-left: 45px;
+        padding: 5px 10px 5px 5px;
+        
+        background-color: $complement;
+        color: white;
+        border-radius: 5px;
+        border-bottom-left-radius: 1px;
+        border-top-left-radius: 1px;
+        
+        &::before {
+            position: relative;
+            left: -40px;
+            width: 0; 
+            height: 0; 
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent; 
+
+            border-right:30px solid $complement;
+            
+            content: "";
+        }
+    }
+    & >.name {
+        margin-top: 1px;
+        right: 50%;
+        margin-right: 40px;
+        padding: 5px 10px 5px 5px;
+        
+        background-color: $secondary-1-1;
+        color: white;
+        border-radius: 5px;
+        border-bottom-right-radius: 1px;
+        border-top-right-radius: 1px;
+        
+        &::after {
+            position: relative;
+            right: -40px;
+            width: 0; 
+            height: 0; 
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent; 
+
+            border-left:30px solid $secondary-1-1;
+            
+            content: "";
+        }
+    }
+}
+
+#main #schedule>.events>.event:nth-child(odd) {
+    & >.time {
+        margin-top: 0px;
+        right: 50%;
+        margin-right: 40px;
+        padding: 5px 10px 5px 5px;
+        
+        background-color: $complement;
+        color: white;
+        border-radius: 5px;
+        border-bottom-right-radius: 1px;
+        border-top-right-radius: 1px;
+        
+        &::after {
+            position: relative;
+            right: -40px;
+            width: 0; 
+            height: 0; 
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent; 
+
+            border-left:30px solid $complement;
+            
+            content: "";
+        }
+    }
+    & >.name {
+        left: 50%;
+        margin-left: 45px;
+        padding: 5px 10px 5px 5px;
+        
+        background-color: $secondary-1-1;
+        color: white;
+        border-radius: 5px;
+        border-bottom-left-radius: 1px;
+        border-top-left-radius: 1px;
+        
+        &::before {
+            position: relative;
+            left: -40px;
+            width: 0; 
+            height: 0; 
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent; 
+
+            border-right:30px solid $secondary-1-1;
+            
+            content: "";
+        }
+    }
 }
 
 #main #sponsors {
@@ -383,21 +574,23 @@ header #title .text img {
 
 header #registerButton {
     font-size: 50px;
+    width: 243px;
     height: 83px;
     position: relative;
     top: -80px;
+    left: 12px;
 } 
 
 header #volunteerButton {
-    font-size: 40px;
-    height: 83px;
+    font-size: 18px;
+    height: 50px;
     position: relative;
     top: -50px;
 } 
 
 header #sponsorButton {
-    font-size: 40px;
-    height: 83px;
+    font-size: 18px;
+    height: 50px;
     position:relative;
     top: -50px;
 } 
@@ -551,13 +744,15 @@ header #sponsorButton {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 2;
+    z-index: 3;
+    pointer-events: none;
 }
 
 #social i {
     font-size: 50px;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
+    pointer-events: auto;
     
     transition: color 0.5s;
 }
@@ -620,27 +815,10 @@ header #sponsorButton {
         height: 0px;
     }
     
-    header #volunteerButton, header #sponsorButton {
-        display: block;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    header #registerButton {
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        left: 12px;
-        right: 0px;
-        top: -87px;
-    }
-    
     header #downArrow {
         top: 770px;
     }
-}
-@media (max-width: 430px) {
+
     header #title {
         bottom: 0px;
         margin-top: 0px;
@@ -651,22 +829,7 @@ header #sponsorButton {
             margin-bottom: 0px;
         }
     }
-
-    header #sponsorButton, header #volunteerButton {
-        display: inline;
-        top: -40px;
-        height: 45px;
-        font-size: 14px;
-        margin: 0px;
-    }
-
-    header #registerButton {
-        top: -100px;
-        width: 213px;
-        height: 68px;
-        font-size: 35px;
-    }
-
+    
     header #downArrow {
         top: 370px;
     }
