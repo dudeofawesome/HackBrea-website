@@ -851,7 +851,7 @@ textarea {
 #main .content * {
   line-height: 1em; }
 
-#main #FAQ:before {
+#main #FAQ::before {
   position: relative;
   top: -25px;
   margin-left: auto;
@@ -867,7 +867,7 @@ textarea {
 #main #schedule {
   text-align: center; }
 
-#main #schedule:before {
+#main #schedule::before {
   position: relative;
   top: -25px;
   margin-left: auto;
@@ -887,7 +887,7 @@ textarea {
 #main #sponsors div * {
   display: inline-block; }
 
-#main #sponsors:before {
+#main #sponsors::before {
   position: relative;
   top: -25px;
   margin-left: auto;

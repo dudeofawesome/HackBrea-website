@@ -38,7 +38,7 @@ function onload () {
     
     setFastScroll(document.getElementById("title"));
     setSlowScroll(document.getElementById("headerImg"));
-    breakers = [document.getElementById("breaker1"), document.getElementById("breaker2")];
+    breakers = [document.getElementById("breaker1"), document.getElementById("breaker2"), document.getElementById("breaker3")];
     
     recalculatePositions();
     var fixedFAB = document.getElementById("downArrow");
