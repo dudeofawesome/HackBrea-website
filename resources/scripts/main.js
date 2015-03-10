@@ -24,11 +24,11 @@ function onscroll () {
     for (var i = 0; i < specialScrolls.length; i++) {
         specialScrolls[i].onscroll(window.scrollY);
     }
-    for (var i = 0; i < breakers.length; i++) {
-        if (breakers[i].getBoundingClientRect().top < window.innerHeight) {
-            if (breakers[i].topVisible == null)
-                breakers[i].topVisible = window.scrollY;
-            breakers[i].style.backgroundPositionY = (((window.scrollY - breakers[i].topVisible) / (window.innerHeight + breakers[i].getBoundingClientRect().height)) * 100) + "%";
+    if (!window.mobilecheck()) {
+        for (var i = 0; i < breakers.length; i++) {
+            if (breakers[i].getBoundingClientRect().top < window.innerHeight) {
+                breakers[i].style.backgroundPositionY = (((window.scrollY - breakers[i].topVisible) / (window.innerHeight + breakers[i].getBoundingClientRect().height)) * 100) + "%";
+            }
         }
     }
 }
@@ -43,6 +43,10 @@ function onload () {
 	    }
     }});
     breakers = [document.getElementById("breaker1"), document.getElementById("breaker2"), document.getElementById("breaker3")];
+    window.scrollTo(0, 0);
+    for (var i = 0; i < breakers.length; i++) {
+        breakers[i].topVisible = breakers[i].getBoundingClientRect().top -1000;
+    }
     
     recalculatePositions();
     var fixedFAB = document.getElementById("downArrow");

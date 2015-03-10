@@ -157,7 +157,7 @@ textarea {
 }
 
 #main .content * {
-    line-height: 1em;
+    line-height: 1.2em;
 }
 
 #main #FAQ::before {
@@ -277,119 +277,116 @@ textarea {
 }
 
 #main #schedule>.events>.event>.icon>i {
-    padding: 0px 0px 0px 1px;
-}
-
-#main #schedule>.events>.event>.icon>i.food {
-    padding: 0px 0px 0px 1px;
+    padding: 0px 0px 2px 1px;
 }
 
 #main #schedule>.events>.event:nth-child(even) {
     & >.time {
-        margin-top: 0px;
+        margin-top: 2px;
         left: 50%;
-        margin-left: 45px;
-        padding: 5px 10px 5px 5px;
+        margin-left: 18px;
+        padding: 5px 10px 5px 20px;
         
         background-color: $complement;
         color: white;
-        border-radius: 5px;
-        border-bottom-left-radius: 1px;
-        border-top-left-radius: 1px;
+        border-radius: 3px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
         
-        &::before {
-            position: relative;
-            top: 0px;
-            left: -35px;
-            width: 0; 
-            height: 0; 
-            border-top: 2px solid transparent;
-            border-bottom: 3px solid transparent; 
-
-            border-right:30px solid $complement;
-            
-            content: "";
-        }
+//        &::before {
+//            position: relative;
+//            top: 0px;
+//            left: -35px;
+//            width: 0; 
+//            height: 0; 
+//            border-top: 2px solid transparent;
+//            border-bottom: 3px solid transparent; 
+//
+//            border-right:30px solid $complement;
+//            
+//            content: "";
+//        }
     }
     & >.name {
-        margin-top: 1px;
+        margin-top: 2px;
         right: 50%;
-        margin-right: 40px;
-        padding: 5px 10px 5px 5px;
+        margin-right: 18px;
+        padding: 5px 20px 5px 5px;
         
         background-color: $secondary-1-1;
         color: white;
-        border-radius: 5px;
-        border-bottom-right-radius: 1px;
-        border-top-right-radius: 1px;
+        border-radius: 3px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
         
-        &::after {
-            position: relative;
-            top: 0px;
-            right: -40px;
-            width: 0; 
-            height: 0; 
-            border-top: 2px solid transparent;
-            border-bottom: 3px solid transparent; 
-
-            border-left:30px solid $secondary-1-1;
-            
-            content: "";
-        }
+//        &::after {
+//            position: relative;
+//            top: 0px;
+//            right: -40px;
+//            width: 0; 
+//            height: 0; 
+//            border-top: 2px solid transparent;
+//            border-bottom: 3px solid transparent; 
+//
+//            border-left:30px solid $secondary-1-1;
+//            
+//            content: "";
+//        }
     }
 }
 
 #main #schedule>.events>.event:nth-child(odd) {
     & >.time {
-        margin-top: 0px;
+        margin-top: 2px;
         right: 50%;
-        margin-right: 40px;
-        padding: 5px 10px 5px 5px;
+        margin-right: 18px;
+        padding: 5px 20px 5px 5px;
         
         background-color: $complement;
         color: white;
-        border-radius: 5px;
-        border-bottom-right-radius: 1px;
-        border-top-right-radius: 1px;
+        border-radius: 3px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
         
-        &::after {
-            position: relative;
-            top: 0px;
-            right: -40px;
-            width: 0; 
-            height: 0; 
-            border-top: 2px solid transparent;
-            border-bottom: 3px solid transparent; 
-
-            border-left:30px solid $complement;
-            
-            content: "";
-        }
+//        &::after {
+//            position: relative;
+//            top: 0px;
+//            right: -40px;
+//            width: 0; 
+//            height: 0; 
+//            border-top: 2px solid transparent;
+//            border-bottom: 3px solid transparent; 
+//
+//            border-left:30px solid $complement;
+//            
+//            content: "";
+//        }
     }
     & >.name {
+        margin-top: 2px;
         left: 50%;
-        margin-left: 45px;
-        padding: 5px 10px 5px 5px;
+        margin-left: 18px;
+        padding: 5px 10px 5px 20px;
         
         background-color: $secondary-1-1;
         color: white;
-        border-radius: 5px;
-        border-bottom-left-radius: 1px;
-        border-top-left-radius: 1px;
+        border-radius: 3px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
         
-        &::before {
-            position: relative;
-            top: 0px;
-            left: -35px;
-            width: 0; 
-            height: 0; 
-            border-top: 2px solid transparent;
-            border-bottom: 3px solid transparent; 
-
-            border-right:30px solid $secondary-1-1;
-            
-            content: "";
-        }
+//        &::before {
+//            position: relative;
+//            top: 0px;
+//            left: -35px;
+//            width: 0; 
+//            height: 0; 
+//            border-top: 2px solid transparent;
+//            border-bottom: 3px solid transparent; 
+//
+//            border-right:30px solid $secondary-1-1;
+//            
+//            content: "";
+//        }
     }
 }
 
