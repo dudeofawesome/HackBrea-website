@@ -63,7 +63,7 @@
 
         $sql->execute();
         
-        sendEmail ($fName . "_" . $lName, $email, "New Volunteer", "They are a " . $age . " year old " . $gender . "\nTheir skills: " . $skills . "\nThey have the following dietary restrictions: " . $food);
+        sendMeEmail ($fName . "_" . $lName, $email, "New Volunteer", "They are a " . $age . " year old " . $gender . "\nTheir skills: " . $skills . "\nThey have the following dietary restrictions: " . $food);
         
         return "success";
     }
@@ -93,7 +93,7 @@
 
         $sql->execute();
 
-        sendEmail ($fName . "_" . $lName, $email, "Sponsorship Opportunity from " . $cName, $message);
+        sendMeEmail ($fName . "_" . $lName, $email, "Sponsorship Opportunity from " . $cName, $message);
         
         return "success";
     }
@@ -117,7 +117,7 @@
         return (strlen($email) >= 5 && strrpos(" ", $email) === false && count(explode("@", $email)) == 2 && count(explode(".", $email)) == 2 && strpos($email, "@") < strpos($email, ".") - 1 && strpos($email, "@") != 0 && strpos($email, ".") != strlen($email) - 1);
     }
 
-    function sendEmail ($from, $address, $subject, $message) {
+    function sendMeEmail ($from, $address, $subject, $message) {
         $email = preg_replace("([\r\n])", "", $address);
         $name = $from;
 
