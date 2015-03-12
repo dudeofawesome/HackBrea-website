@@ -1,14 +1,15 @@
+<?php require $_SERVER["DOCUMENT_ROOT"]."/data/info.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=false" />
-        <meta content="Brea Olinda High School's First Hackathon" name="HackBrea">
+        <meta content="Brea Olinda High School's First Hackathon" name="<?php echo $EVENT_NAME; ?>">
         <meta name="theme-color" content="#499379">
         <link rel='shortcut icon' href="resources/images/favicon.ico">
         <link rel="icon" sizes="256x256" href="resources/images/icon_256.png">
 
-        <title>HackBrea</title>
+        <title><?php echo $EVENT_NAME; ?></title>
 
         <link href="resources/styles/mdi/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
         <link href="resources/styles/main.css" rel="stylesheet">
@@ -24,11 +25,11 @@
     <body onload="onload();" id="body">
         <header id="header">
             <div id="social">
-                <a href="http://twitter.com/hackbrea"><i class="mdi mdi-twitter-box"></i></a>
-                <a href="http://facebook.com/hackbrea"><i class="mdi mdi-facebook-box"></i></a>
+                <a href="<?php echo $TWITTER_ACCOUNT; ?>"><i class="mdi mdi-twitter-box"></i></a>
+                <a href="<?php echo $FACEBOOK_ACCOUNT; ?>"><i class="mdi mdi-facebook-box"></i></a>
             </div>
             <div id="title" class="title">
-                <div class="text">HACK<img src="resources/images/icon.png" />BREA</div>
+                <div class="text"><?php echo strtoupper($EVENT_NAME_FIRST); ?><img src="resources/images/icon.png" /><?php echo strtoupper($EVENT_NAME_LAST); ?></div>
                 <div>
                     <button id="volunteerButton" class="material raised dark" onclick="openForm('volunteer', this);">Volunteer</button>
                     <button id="sponsorButton" class="material raised dark" onclick="openForm('sponsor', this);">Sponsor</button>
@@ -161,6 +162,7 @@
                         Hacking is not about breaking into your school computers.
                         Hackathons are a place where students come together to work on fun projects using technology.
                         It's a great time to hangout with friends, work on something you care about, and have food paid for.
+                        <a href="https://www.google.com/url?q=https%3A%2F%2Fmedium.com%2F%40alexkern%2Fwhat-is-a-hackathon-c2162b893b0a&sa=D&sntz=1&usg=AFQjCNHA62ybz119QtbESWwx5iMgQacH5w">Click here for a more in depth description.</a>
                     </div>
                 </div>
                 <div class="question">
@@ -168,7 +170,7 @@
                         <i class="mdi mdi-calendar"></i> When?
                     </div>
                     <div class="answer">
-                        HackBrea will start at 9:00 AM Saturday, May 20th, and continue until 12:00 PM Sunday, May 21st.
+                        <?php echo $EVENT_NAME; ?> will start at <?php echo $START_TIME.", ".$DAY_OF_EVENT.", ".$MONTH_OF_EVENT." ".$DATE_OF_EVENT; ?>, and continue until <?php echo $END_TIME.", ".$END_DAY_OF_EVENT.", ".$END_MONTH_OF_EVENT." ".$END_DATE_OF_EVENT; ?>.
                     </div>
                 </div>
                 <div class="question">
@@ -176,8 +178,8 @@
                         <i class="mdi mdi-map"></i> Where?
                     </div>
                     <div class="answer">
-                        The main event will be in the Wildcat gym, at Brea Olinda High School,<address style="padding: 5px 0px 5px 0px;"> 789 Wildcat Way<br /> Brea CA, 92821</address>
-                        There will be other side events taking place througout campus, including learning workshops, gaming tournaments, and more!
+                        The main event will be in the <?php echo $SPECIFIC_LOCATION_NAME; ?>, at <?php echo $GENERAL_LOCATION_NAME; ?>,<address style="padding: 5px 0px 5px 0px;"> <?php echo $ADDRESS_LINE_1; ?><br /><?php echo $ADDRESS_LINE_2; ?></address>
+                        There will be other side events taking place throughout campus, including learning workshops, gaming tournaments, and more!
                     </div>
                 </div>
             </div>
@@ -188,7 +190,7 @@
                         <i class="mdi mdi-xml"></i> Do I need to know how to code?
                     </div>
                     <div class="answer">
-                        HackBrea is for beginners and experts alike. As long as you want to build something (whether you know how to or not), you can come. A main focus of this event is to introduce beginners. Mentors will be available throughout the event to get you started.
+                        <?php echo $EVENT_NAME; ?> is for beginners and experts alike. As long as you want to build something (whether you know how to or not), you can come. A main focus of this event is to introduce beginners. Mentors will be available throughout the event to get you started.
                     </div>
                 </div>
                 <div class="question">
@@ -212,7 +214,7 @@
                         <i class="mdi mdi-lightbulb"></i> What if I don't have an idea?
                     </div>
                     <div class="answer">
-                        There will be plenty of other people at HackBrea that will have ideas, and a lot that don’t, or you could join the discussion on <a href="https://facebook.com/hackbrea">Facebook</a>.
+                        There will be plenty of other people at <?php echo $EVENT_NAME; ?> that will have ideas, and a lot that don’t, or you could join the discussion on <a href="<?php echo $FACEBOOK_ACCOUNT; ?>">Facebook</a>.
                     </div>
                 </div>
                 <div class="question">
@@ -236,7 +238,7 @@
                         <i class="mdi mdi-currency-btc"></i> Surely an experience like this must be expensive?
                     </div>
                     <div class="answer">
-                        HackBrea will be completely free for all attendees! Meals and snacks are provided the entire event. All you need to worry about is learning and building.
+                        <?php echo $EVENT_NAME; ?> will be completely free for all attendees! Meals and snacks are provided the entire event. All you need to worry about is learning and building.
                     </div>
                 </div>
                 <div class="question">
@@ -269,7 +271,7 @@
                             <i class="mdi mdi-help-circle"></i> Still have a question?
                         </div>
                         <div class="answer">
-                            Feel free to shoot us an email at <a href="mailto:questions@hackbrea.com">questions@hackbrea.com</a>
+                            Feel free to shoot us an email at <a href="mailto:<?php echo $QUESTION_EMAIL; ?>"><?php echo $QUESTION_EMAIL; ?></a>
                         </div>
                     </div>
                 </div>
@@ -279,29 +281,29 @@
                 <div class="timeline"></div>
                 <div class="events">
                     <div class="event">
-                        <div class="time">8:30 AM</div>
-                        <div class="icon"><i class="mdi mdi-clock"></i></div>
-                        <div class="name">Opening presentations</div>
+                        <div class="time">10:00 AM</div>
+                        <div class="icon"><i class="mdi mdi-clipboard-check"></i></div>
+                        <div class="name">Registration</div>
                     </div>
                     <div class="event">
-                        <div class="time">10:00 AM</div>
+                        <div class="time">11:00 AM</div>
+                        <div class="icon"><i class="mdi mdi-clock"></i></div>
+                        <div class="name">Opening ceremony and keynote</div>
+                    </div>
+                    <div class="event">
+                        <div class="time">12:00 PM</div>
+                        <div class="icon"><i class="mdi mdi-food"></i></div>
+                        <div class="name">Lunch time and sponsor fair</div>
+                    </div>
+                    <div class="event">
+                        <div class="time">1:00 PM</div>
                         <div class="icon"><i class="mdi mdi-xml"></i></div>
                         <div class="name">We start hacking</div>
                     </div>
                     <div class="event">
-                        <div class="time">11:00 AM</div>
+                        <div class="time">1:00 PM</div>
                         <div class="icon"><i class="mdi mdi-memory"></i></div>
-                        <div class="name">Workshops start (Android, Web, Arduino, ???)</div>
-                    </div>
-                    <div class="event">
-                        <div class="time">12:30 PM</div>
-                        <div class="icon"><i class="mdi mdi-food"></i></div>
-                        <div class="name">Lunch time</div>
-                    </div>
-                    <div class="event">
-                        <div class="time">1:30 PM</div>
-                        <div class="icon"><i class="mdi mdi-memory"></i></div>
-                        <div class="name">Workshops resume</div>
+                        <div class="name">Workshops start</div>
                     </div>
                     <div class="event">
                         <div class="time">4:00 PM</div>
@@ -311,7 +313,7 @@
                     <div class="event">
                         <div class="time">4:30 PM</div>
                         <div class="icon"><i class="mdi mdi-memory"></i></div>
-                        <div class="name">Some other workshop or something</div>
+                        <div class="name">Workshops round 2 start</div>
                     </div>
                     <div class="event">
                         <div class="time">7:00 PM</div>
@@ -319,17 +321,17 @@
                         <div class="name">Dinner</div>
                     </div>
                     <div class="event">
-                        <div class="time">11:00 PM</div>
-                        <div class="icon"><i class="mdi mdi-gamepad-variant"></i></div>
-                        <div class="name">Super Smash Bros tournament</div>
-                    </div>
-                    <div class="event">
                         <div class="time">1:00 AM</div>
                         <div class="icon"><i class="mdi mdi-food"></i></div>
                         <div class="name">Super secret snack time!</div>
                     </div>
                     <div class="event">
-                        <div class="time">3:00 AM</div>
+                        <div class="time">2:00 AM</div>
+                        <div class="icon"><i class="mdi mdi-gamepad-variant"></i></div>
+                        <div class="name">Super Smash Bros tournament</div>
+                    </div>
+                    <div class="event">
+                        <div class="time">4:00 AM</div>
                         <div class="icon"><i class="mdi mdi-puzzle"></i></div>
                         <div class="name">Code competition</div>
                     </div>
@@ -339,27 +341,32 @@
                         <div class="name">Snack time</div>
                     </div>
                     <div class="event">
-                        <div class="time">8:00 AM</div>
+                        <div class="time">9:00 AM</div>
                         <div class="icon"><i class="mdi mdi-food"></i></div>
                         <div class="name">Breakfast</div>
                     </div>
                     <div class="event">
-                        <div class="time">10:00 AM</div>
+                        <div class="time">1:00 PM</div>
                         <div class="icon"><i class="mdi mdi-xml"></i></div>
-                        <div class="name">All submissions are due</div>
+                        <div class="name">Lunch &amp; All submissions are due</div>
                     </div>
                     <div class="event">
-                        <div class="time">10:30 AM</div>
+                        <div class="time">1:45 PM</div>
                         <div class="icon"><i class="mdi mdi-thumb-up"></i></div>
-                        <div class="name">Judging begins</div>
+                        <div class="name">Demo fair A begins</div>
                     </div>
                     <div class="event">
-                        <div class="time">11:30 AM</div>
+                        <div class="time">3:00 PM</div>
+                        <div class="icon"><i class="mdi mdi-thumb-up"></i></div>
+                        <div class="name">Demo fair B begins</div>
+                    </div>
+                    <div class="event">
+                        <div class="time">4:15 PM</div>
                         <div class="icon"><i class="mdi mdi-presentation"></i></div>
-                        <div class="name">Final presentations</div>
+                        <div class="name">Finalist presentations</div>
                     </div>
                     <div class="event">
-                        <div class="time">12:00 PM</div>
+                        <div class="time">5:00 PM</div>
                         <div class="icon"><i class="mdi mdi-trophy"></i></div>
                         <div class="name">Winners announced</div>
                     </div>
