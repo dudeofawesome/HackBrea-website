@@ -43,115 +43,6 @@
 
         <button class="material floating dark" id="floatingUpArrow" onclick="scrollToTopOfPage(); switchToFAB();"><i class="mdi mdi-chevron-down"></i></button>
 
-        <div id="forms">
-            <div id="register" class="form">
-                <form action="" method="post" onsubmit="submitForm(); return false;">
-                    <div class="header">Sign Up</div>
-
-                    <div class="row">
-                        <div class="cell"><input type="text" class="material light" id="reg_fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
-                        <div class="cell"><input type="text" class="material light" id="reg_lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
-                    </div>
-                    <div class="row">
-                        <div class="cell"><input type="email" class="material light" id="reg_email" placeholder="Email" /><div class="error">You done goofed</div></div>
-                        <div class="cell"><input type="url" class="material light" id="reg_github" placeholder="Github Username" /><div class="error">You done goofed</div></div>
-                    </div>
-                    <div class="row">
-                        <div class="cell"><input type="text" class="material light" id="reg_school" placeholder="School" /><div class="error">You done goofed</div></div>
-                        <div class="cell"><input type="number" class="material light" id="reg_age" placeholder="Age" value="" /><div class="error">You done goofed</div></div>
-                    </div>
-                    <div class="row">
-                        <div class="cell SBSrad">
-                            <div class="radioBoxGroup">
-                                <input type="radio" name="grade" class="material light" id="reg_gradeFreshman" value="freshman" checked /><label for="reg_gradeFreshman">Freshman</label><br />
-                                <input type="radio" name="grade" class="material light" id="reg_gradeSophomore" value="sophomore" /><label for="reg_gradeSophomore">Sophomore</label><br />
-                                <input type="radio" name="grade" class="material light" id="reg_gradeJunior" value="junior" /><label for="reg_gradeJunior">Junior</label><br />
-                                <input type="radio" name="grade" class="material light" id="reg_gradeSenior" value="senior" /><label for="reg_gradeSenior">Senior</label>
-                            </div>
-                        </div>
-                        <div class="cell SBSrad">
-                            <div class="radioBoxGroup">
-                                <input type="radio" name="gender" class="material light" id="reg_genderMale" value="male" checked /><label for="reg_genderMale">Male</label><br />
-                                <input type="radio" name="gender" class="material light" id="reg_genderFemale" value="female" /><label for="reg_genderFemale">Female</label><br />
-                                <input type="radio" name="gender" class="material light" id="reg_genderOther" value="other" /><label for="reg_genderOther">Other</label><br />
-                                <input type="radio" name="gender" class="material light" id="reg_genderPNS" value="pns" /><label for="reg_genderPNS">Prefer not to say</label><br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input type="text" class="material light" style="width:100%;" id="reg_food" placeholder="Dietary Restrictions" value="" /><div class="error"></div>
-                    </div>
-                    <div class="row">
-                        <textarea type="text" class="material light" id="reg_skills" style="width:447px; max-width:100%; height: 100px;" placeholder="Skills"></textarea><div class="error">You done goofed</div>
-                    </div>
-                    <div class="row" style="padding-bottom: 20px; text-align: center;">
-                        <input type="button" class="material dark raised" value="Submit" onclick="submitForm('register'); return false;" />
-                        <input type="reset" class="material light raised" value="Reset" />
-                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('register', document.getElementById('registerButton'));" />
-                    </div>
-                </form>
-            </div>
-            <div id="volunteer" class="form">
-                <form action="" method="post" onsubmit="submitForm(); return false;">
-                    <div class="header">Volunteer</div>
-
-                    <div class="row">
-                        <div class="cell"><input type="text" class="material light" id="vol_fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
-                        <div class="cell"><input type="text" class="material light" id="vol_lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
-                    </div>
-                    <div class="row">
-                        <div class="cell"><input type="email" class="material light" id="vol_email" placeholder="Email" /><div class="error">You done goofed</div></div>
-                        <div class="cell"><input type="number" class="material light" id="vol_age" placeholder="Age" value="" /><div class="error">You done goofed</div></div>
-                    </div>
-                    <div class="row">
-                        <div class="cell">
-                            <input type="text" class="material light" style="width:100%;" id="vol_food" placeholder="Dietary Restrictions" value="" /><div class="error"></div>
-                        </div>
-                        <div class="cell">
-                            <div class="radioBoxGroup">
-                                <input type="radio" name="gender" class="material light" id="vol_genderMale" value="male" checked /><label for="vol_genderMale">Male</label><br />
-                                <input type="radio" name="gender" class="material light" id="vol_genderFemale" value="female" /><label for="vol_genderFemale">Female</label><br />
-                                <input type="radio" name="gender" class="material light" id="vol_genderOther" value="other" /><label for="vol_genderOther">Other</label><br />
-                                <input type="radio" name="gender" class="material light" id="vol_genderPNS" value="pns" /><label for="vol_genderPNS">Prefer not to say</label><br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <textarea type="text" class="material light" id="vol_skills" style="width:650px; max-width:100%; height: 100px;" placeholder="Skills"></textarea><div class="error">You done goofed</div>
-                    </div>
-                    <div class="row" style="padding-bottom: 20px; text-align: center;">
-                        <input type="button" class="material dark raised" value="Submit" onclick="submitForm('volunteer'); return false;" />
-                        <input type="reset" class="material light raised" value="Reset" />
-                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('volunteer', document.getElementById('volunteerButton'));" />
-                    </div>
-                </form>
-            </div>
-            <div id="sponsor" class="form">
-                <form action="" method="post" onsubmit="submitForm(); return false;">
-                    <div class="header">Sponsor</div>
-
-                    <div class="row">
-                        <input type="text" class="material light" id="spons_cName" style="width:447px;" placeholder="Company Name" /><div class="error">You done goofed</div>
-                    </div>
-                    <div class="row">
-                        <div class="cell"><input type="text" class="material light" id="spons_fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
-                        <div class="cell"><input type="text" class="material light" id="spons_lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
-                    </div>
-                    <div class="row">
-                        <input type="email" class="material light" id="spons_email" style="width:447px;" placeholder="Email" /><div class="error">You done goofed</div>
-                    </div>
-                    <div class="row">
-                        <textarea type="text" class="material light" id="spons_message" style="width:447px; max-width:100%; height: 100px;" placeholder="Message"></textarea><div class="error">You done goofed</div>
-                    </div>
-                    <div class="row" style="padding-bottom: 20px; text-align: center;">
-                        <input type="button" class="material dark raised" value="Submit" onclick="submitForm('sponsor'); return false;" />
-                        <input type="reset" class="material light raised" value="Reset" />
-                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('sponsor', document.getElementById('sponsorButton'));" />
-                    </div>
-                </form>
-            </div>
-        </div>
-        
         <div id="main">
             <div id="about" class="content">
                 <div class="question">
@@ -348,7 +239,7 @@
                     <div class="event">
                         <div class="time">1:00 PM</div>
                         <div class="icon"><i class="mdi mdi-xml"></i></div>
-                        <div class="name">Lunch &amp; All submissions are due</div>
+                        <div class="name">Lunch &amp; all submissions are due</div>
                     </div>
                     <div class="event">
                         <div class="time">1:45 PM</div>
@@ -430,6 +321,115 @@
                 <div>Made with <span style="color:rgb(255, 0, 0);">&hearts;</span> by <a href="http://0rleans.com">Louis Orleans</a></div>
                 <div>In partnership with <a href="http://www.globalitacademy.us/">Global IT Academy</a></div>
             </footer>
+        </div>
+
+        <div id="forms">
+            <div id="register" class="form">
+                <form action="" method="post" onsubmit="submitForm(); return false;">
+                    <div class="header">Sign Up</div>
+
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="reg_fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="text" class="material light" id="reg_lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="email" class="material light" id="reg_email" placeholder="Email" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="url" class="material light" id="reg_github" placeholder="Github Username" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="reg_school" placeholder="School" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="number" class="material light" id="reg_age" placeholder="Age" value="" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell SBSrad">
+                            <div class="radioBoxGroup">
+                                <input type="radio" name="grade" class="material light" id="reg_gradeFreshman" value="freshman" checked /><label for="reg_gradeFreshman">Freshman</label><br />
+                                <input type="radio" name="grade" class="material light" id="reg_gradeSophomore" value="sophomore" /><label for="reg_gradeSophomore">Sophomore</label><br />
+                                <input type="radio" name="grade" class="material light" id="reg_gradeJunior" value="junior" /><label for="reg_gradeJunior">Junior</label><br />
+                                <input type="radio" name="grade" class="material light" id="reg_gradeSenior" value="senior" /><label for="reg_gradeSenior">Senior</label>
+                            </div>
+                        </div>
+                        <div class="cell SBSrad">
+                            <div class="radioBoxGroup">
+                                <input type="radio" name="gender" class="material light" id="reg_genderMale" value="male" checked /><label for="reg_genderMale">Male</label><br />
+                                <input type="radio" name="gender" class="material light" id="reg_genderFemale" value="female" /><label for="reg_genderFemale">Female</label><br />
+                                <input type="radio" name="gender" class="material light" id="reg_genderOther" value="other" /><label for="reg_genderOther">Other</label><br />
+                                <input type="radio" name="gender" class="material light" id="reg_genderPNS" value="pns" /><label for="reg_genderPNS">Prefer not to say</label><br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="material light" style="width:100%;" id="reg_food" placeholder="Dietary Restrictions" value="" /><div class="error"></div>
+                    </div>
+                    <div class="row">
+                        <textarea type="text" class="material light" id="reg_skills" style="width:447px; max-width:100%; height: 100px;" placeholder="Skills"></textarea><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row" style="padding-bottom: 20px; text-align: center;">
+                        <input type="button" class="material dark raised" value="Submit" onclick="submitForm('register'); return false;" />
+                        <input type="reset" class="material light raised" value="Reset" />
+                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('register', document.getElementById('registerButton'));" />
+                    </div>
+                </form>
+            </div>
+            <div id="volunteer" class="form">
+                <form action="" method="post" onsubmit="submitForm(); return false;">
+                    <div class="header">Volunteer</div>
+
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="vol_fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="text" class="material light" id="vol_lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="email" class="material light" id="vol_email" placeholder="Email" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="number" class="material light" id="vol_age" placeholder="Age" value="" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <input type="text" class="material light" style="width:100%;" id="vol_food" placeholder="Dietary Restrictions" value="" /><div class="error"></div>
+                        </div>
+                        <div class="cell">
+                            <div class="radioBoxGroup">
+                                <input type="radio" name="gender" class="material light" id="vol_genderMale" value="male" checked /><label for="vol_genderMale">Male</label><br />
+                                <input type="radio" name="gender" class="material light" id="vol_genderFemale" value="female" /><label for="vol_genderFemale">Female</label><br />
+                                <input type="radio" name="gender" class="material light" id="vol_genderOther" value="other" /><label for="vol_genderOther">Other</label><br />
+                                <input type="radio" name="gender" class="material light" id="vol_genderPNS" value="pns" /><label for="vol_genderPNS">Prefer not to say</label><br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <textarea type="text" class="material light" id="vol_skills" style="width:650px; max-width:100%; height: 100px;" placeholder="Skills"></textarea><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row" style="padding-bottom: 20px; text-align: center;">
+                        <input type="button" class="material dark raised" value="Submit" onclick="submitForm('volunteer'); return false;" />
+                        <input type="reset" class="material light raised" value="Reset" />
+                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('volunteer', document.getElementById('volunteerButton'));" />
+                    </div>
+                </form>
+            </div>
+            <div id="sponsor" class="form">
+                <form action="" method="post" onsubmit="submitForm(); return false;">
+                    <div class="header">Sponsor</div>
+
+                    <div class="row">
+                        <input type="text" class="material light" id="spons_cName" style="width:447px;" placeholder="Company Name" /><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><input type="text" class="material light" id="spons_fName" placeholder="First Name" /><div class="error">You done goofed</div></div>
+                        <div class="cell"><input type="text" class="material light" id="spons_lName" placeholder="Last Name" /><div class="error">You done goofed</div></div>
+                    </div>
+                    <div class="row">
+                        <input type="email" class="material light" id="spons_email" style="width:447px;" placeholder="Email" /><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row">
+                        <textarea type="text" class="material light" id="spons_message" style="width:447px; max-width:100%; height: 100px;" placeholder="Message"></textarea><div class="error">You done goofed</div>
+                    </div>
+                    <div class="row" style="padding-bottom: 20px; text-align: center;">
+                        <input type="button" class="material dark raised" value="Submit" onclick="submitForm('sponsor'); return false;" />
+                        <input type="reset" class="material light raised" value="Reset" />
+                        <input type="button" class="material light raised" value="Cancel" onclick="closeForm('sponsor', document.getElementById('sponsorButton'));" />
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>
