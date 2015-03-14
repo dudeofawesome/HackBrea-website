@@ -21,7 +21,7 @@
 	$ADDRESS_LINE_1 = "789 Wildcat Way";
 	$ADDRESS_LINE_2 = "Brea, CA, 92821";
 
-	$FACEBOOK_ACCOUNT = "https://facebook.com/".$EVENT_NAME;
+	$FACEBOOK_ACCOUNT = "https://facebook.com/groups/".$EVENT_NAME;
 	$TWITTER_ACCOUNT = "https://twitter.com/".$EVENT_NAME;
 
 	$QUESTION_EMAIL = "questions@".$DOMAIN_NAME;
