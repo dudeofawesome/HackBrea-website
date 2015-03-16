@@ -458,7 +458,33 @@ footer {
     margin-top: 150px;
     text-align: center;
 
-    color: rgb(190, 190, 190);
+    color: rgb(180, 180, 180);
+}
+
+footer>div {
+    
+}
+
+footer a {
+    color:rgb(109, 183, 157);
+    transition: color 0.3s;
+    
+    &:hover {
+        color: rgb(180, 180, 180);
+    }
+}
+
+footer .githubLink {
+    margin-bottom: -10px;
+}
+
+footer .githubLink a {
+    font-size: 40px;
+    text-decoration: none;
+}
+
+footer .wideDash {
+    font-kerning: 100;
 }
 
 header #downArrow {
@@ -704,7 +730,38 @@ header #sponsorButton {
 
 
 
+@media (max-width: 999px) {
+    #sponsors div .level {
+        display: block !important;
+        margin-top: 55px;
+        margin-bottom: -90px;
+    }
 
+    #sponsors #gold .sponsor {
+        padding: 0px 0px 40px 0px;
+    }
+
+    #sponsors #silver .sponsor {
+        height: 45px;
+    }
+
+    #sponsors #bronze .sponsor {
+        width: 40%;
+        padding: 10px 10px 0px 10px;
+    }
+
+    #sponsors div .level::after {
+        display: none;
+    }
+
+    #sponsors div .sponsor::after {
+        display: none;
+    }
+
+    #sponsors .closingBrace {
+        display: none !important;
+    }
+}
 @media (max-width: 799px) {
     header #title {
         left: 50%;
@@ -835,37 +892,6 @@ header #sponsorButton {
 
     #main .breaker {
         height: 150px;
-    }
-
-    #sponsors div .level {
-        display: block !important;
-        margin-top: 55px;
-        margin-bottom: -90px;
-    }
-
-    #sponsors #gold .sponsor {
-        padding: 0px 0px 40px 0px;
-    }
-
-    #sponsors #silver .sponsor {
-        height: 45px;
-    }
-
-    #sponsors #bronze .sponsor {
-        width: 40%;
-        padding: 10px 10px 0px 10px;
-    }
-
-    #sponsors div .level::after {
-        display: none;
-    }
-
-    #sponsors div .sponsor::after {
-        display: none;
-    }
-
-    #sponsors .closingBrace {
-        display: none !important;
     }
 
     footer {

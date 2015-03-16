@@ -318,8 +318,8 @@
                 </div>
             </div>
             <footer>
-                <div>Made with <span style="color:rgb(255, 120, 120);">&hearts;</span> by <a href="http://0rleans.com" style="color:rgb(109, 183, 157);">Louis Orleans</a></div>
-                <div>In partnership with <a href="http://www.globalitacademy.us/" style="color:rgb(109, 183, 157);">Global IT Academy</a></div>
+                <div>Made with <span style="color:rgb(255, 120, 120);">&hearts;</span> by <a href="http://0rleans.com">Louis Orleans</a> <span class="wideDash">-</span> Hosted by <a href="http://www.globalitacademy.us/">Global IT Academy</a></div>
+                <div class="githubLink"><a href="http://github.com/dudeofawesome/hackbrea"><i class="mdi mdi-github-circle"></i></a></div>
             </footer>
         </div>
 
