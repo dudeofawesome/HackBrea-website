@@ -35,7 +35,7 @@ function onscroll () {
 
 function onload () {
     smoothScroll.init();
-    
+
     setFastScroll(document.getElementById("title"));
     specialScrolls.push({applyTo:document.getElementById("headerImg"), onscroll:function (scroll) {
         if (!window.mobilecheck()) {
@@ -47,7 +47,7 @@ function onload () {
     for (var i = 0; i < breakers.length; i++) {
         breakers[i].topVisible = breakers[i].getBoundingClientRect().top -1000;
     }
-    
+
     recalculatePositions();
     var fixedFAB = document.getElementById("downArrow");
     specialScrolls.push({applyTo:fixedFAB, onscroll:function (scroll) {
@@ -57,6 +57,10 @@ function onload () {
             switchToFAB();
         }
     }});
+
+    var inPageLink = window.location.href.split("?")[1];
+    if (inPageLink === "register" || inPageLink === "volunteer" || inPageLink === "sponsor")
+        openForm(inPageLink, document.getElementById(inPageLink + "Button"));
 }
 
 
@@ -89,7 +93,7 @@ var originalPosFAB;
 function switchToFAB () {
     var FAB = document.getElementById("floatingUpArrow");
     var fixedFAB = document.getElementById("downArrow");
-    
+
     if (FAB.style.display === "none" || FAB.style.display === "") {
         var pos = fixedFAB.getBoundingClientRect();
         FAB.style.right = window.innerWidth - (pos.left + pos.width) - 15 + "px";
@@ -124,14 +128,14 @@ function openForm (name, sender) {
     form.style.transform = "scale(" + sender.getBoundingClientRect().width / form.getBoundingClientRect().width + ", " + sender.getBoundingClientRect().height / form.getBoundingClientRect().height + ") translate(-70px, -110px)";
     form.style.left = sender.getBoundingClientRect().left + sender.getBoundingClientRect().width / 2;
     form.style.top = sender.getBoundingClientRect().top + sender.getBoundingClientRect().height / 2;
-    
+
     form.style.pointerEvents = "auto";
     TweenLite.to(form, (window.mobilecheck() ? 0 : tweenTime), {opacity: 1, transform: "scale(1, 1) translate(0px, 0px)", left: "50%", top: "50%"});
 }
 
 function closeForm (name, sender) {
     var form = document.getElementById(name);
-    
+
     form.style.pointerEvents = "none";
     TweenLite.to(form, (window.mobilecheck() ? 0 : tweenTime), {opacity: 0, transform: "scale(" + sender.getBoundingClientRect().width / form.getBoundingClientRect().width + ", " + sender.getBoundingClientRect().height / form.getBoundingClientRect().height + ") translate(-70px, -110px)", left: sender.getBoundingClientRect().left + sender.getBoundingClientRect().width / 2, top: sender.getBoundingClientRect().top + sender.getBoundingClientRect().height / 2});
 }
@@ -226,7 +230,7 @@ function submitForm (name) {
 
 function checkInputForErrors (name) {
     var hasError = false;
-    
+
     switch (name) {
         case "register":
             var fName = document.getElementById("reg_fName");

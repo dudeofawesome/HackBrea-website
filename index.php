@@ -13,7 +13,7 @@
 
         <link href="resources/styles/mdi/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
         <link href="resources/styles/main.css" rel="stylesheet">
-        
+
         <script src="resources/scripts/greensock-js/plugins/CSSPlugin.min.js"></script>
         <script src="resources/scripts/greensock-js/easing/EasePack.min.js"></script>
         <script src="resources/scripts/greensock-js/TweenLite.min.js"></script>
@@ -21,7 +21,7 @@
         <script type="text/javascript" src="resources/scripts/headers.js"></script>
         <script type="text/javascript" src="resources/scripts/main.js"></script>
     </head>
-    
+
     <body onload="onload();" id="body">
         <header id="header">
             <div id="social">
@@ -29,7 +29,7 @@
                 <a href="<?php echo $FACEBOOK_ACCOUNT; ?>"><i class="mdi mdi-facebook-box"></i></a>
             </div>
             <div id="title" class="title">
-                <div class="text"><?php echo strtoupper($EVENT_NAME_FIRST); ?><img src="resources/images/icon.png" /><?php echo strtoupper($EVENT_NAME_LAST); ?></div>
+                <div class="text"><?php echo strtoupper($EVENT_NAME_FIRST); ?><img src="resources/images/icon_200.png" /><?php echo strtoupper($EVENT_NAME_LAST); ?></div>
                 <div>
                     <button id="volunteerButton" class="material raised dark" onclick="openForm('volunteer', this);">Volunteer</button>
                     <button id="sponsorButton" class="material raised dark" onclick="openForm('sponsor', this);">Sponsor</button>
@@ -45,6 +45,7 @@
 
         <div id="main">
             <div id="about" class="content">
+                <div style="color: rgb(200, 0, 0);"><i class="mdi mdi-alert-circle" style="font-size: 30px;"></i> <span style="position:relative;top:-7px;">This event is still in early stages. As such, information in this section may not be accurate.</span></div>
                 <div class="question">
                     <div class="query">
                         <i class="mdi mdi-help-circle"></i> What is a hackathon?
@@ -69,7 +70,7 @@
                         <i class="mdi mdi-map"></i> Where?
                     </div>
                     <div class="answer">
-                        The main event will be in the <?php echo $SPECIFIC_LOCATION_NAME; ?>, at <?php echo $GENERAL_LOCATION_NAME; ?>,<address style="padding: 5px 0px 5px 0px;"> <?php echo $ADDRESS_LINE_1; ?><br /><?php echo $ADDRESS_LINE_2; ?></address>
+                        The main event will be in the <?php echo $SPECIFIC_LOCATION_NAME; ?>, at <?php echo $GENERAL_LOCATION_NAME; ?>,<a href="<?php echo $GOOGLE_MAPS_LINK; ?>"><address style="padding: 5px 0px 5px 0px;"> <?php echo $ADDRESS_LINE_1; ?><br /><?php echo $ADDRESS_LINE_2; ?></address></a>
                         There will be other side events taking place throughout campus, including learning workshops, gaming tournaments, and more!
                     </div>
                 </div>
@@ -265,6 +266,7 @@
             </div>
             <div class="breaker" id="breaker3" style="background-image:url('resources/images/breakers/3.jpg')"></div>
             <div id="sponsors" class="content">
+                <div style="color: rgb(200, 0, 0);"><i class="mdi mdi-alert-circle" style="font-size: 30px;"></i> <span style="position:relative;top:-7px;">This event is still in early stages. As such, information in this section may not be accurate.</span></div>
                 <div id="gold">
                     <div class="level"><i class="mdi mdi-star-circle"></i></div>
                     <div class="sponsor">
@@ -318,7 +320,8 @@
                 </div>
             </div>
             <footer>
-                <div>Made with <span style="color:rgb(255, 120, 120);">&hearts;</span> by <a href="http://0rleans.com">Louis Orleans</a> <span class="wideDash">-</span> Hosted by <a href="http://www.globalitacademy.us/">Global IT Academy</a></div>
+                <div>Made with <span style="color:rgb(255, 120, 120);">&hearts;</span> by <a href="http://0rleans.com">Louis Orleans</a></div>
+                <div>Event hosted by <a href="http://www.globalitacademy.us/">Global IT Academy</a></div>
                 <div class="githubLink"><a href="http://github.com/dudeofawesome/hackbrea"><i class="mdi mdi-github-circle"></i></a></div>
             </footer>
         </div>
