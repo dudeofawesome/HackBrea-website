@@ -157,6 +157,14 @@
                         If you’d like, you will be able to present your project to a panel of judges, then they will make decisions based on a combination of uniqueness, technical complexity, and viability.
                     </div>
                 </div>
+                <div class="question">
+                    <div class="query">
+                        <i class="mdi mdi-file-document-box"></i> Do you have a code of conduct?
+                    </div>
+                    <div class="answer">
+                        Yes! We comply with the MLH <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">code of conduct</a>.
+                    </div>
+                </div>
                 <div>
                     <div class="question">
                         <div class="query">

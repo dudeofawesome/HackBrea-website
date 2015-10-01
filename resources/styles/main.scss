@@ -36,7 +36,7 @@ header #headerImg {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    
+
     background-image: url('/resources/images/header.jpg');
     background-size: cover;
     background-position: 50% 30%;
@@ -50,7 +50,7 @@ header #title {
     margin-left: -390px;
     margin-top: -50px;
     z-index: 2;
-    
+
     color: rgba(255, 255, 255, 0.9);
     font-size: 100px;
     text-align: center;
@@ -70,9 +70,9 @@ a, .a {
     text-decoration: underline;
 	color: $secondary-1-1;
     cursor: pointer;
-    
+
     transition: color 0.3s;
-    
+
     &:hover {
         color: rgb(0, 0, 0);
     }
@@ -92,7 +92,7 @@ textarea {
     margin-top: 20px;
     padding-top: 20px;
 	overflow-x: hidden;
-    
+
     border-top: 2px solid $secondary-1-1;
     background-color: rgb(250, 250, 250);
     box-shadow: 0px 0px 200px 20px rgba(0, 0, 0, 1);
@@ -119,7 +119,7 @@ textarea {
     width: 190px;
     height: 50px;
     display: block;
-    
+
     background-color: #fafafa;
     font-size: 50px;
     content: 'About';
@@ -136,13 +136,13 @@ textarea {
 #main div .question .query {
     display: block;
     padding-bottom: 10px;
-    
+
     font-size: 20px;
 }
 
 #main div .question .answer {
     display: block;
-    
+
     font-size: 1em;
 }
 
@@ -169,7 +169,7 @@ textarea {
     width: 170px;
     height: 50px;
     display: block;
-    
+
     background-color: #fafafa;
     font-size: 50px;
     content: 'FAQ';
@@ -188,7 +188,7 @@ textarea {
     width: 265px;
     height: 50px;
     display: block;
-    
+
     background-color: #fafafa;
     font-size: 50px;
     content: 'Schedule';
@@ -204,7 +204,7 @@ textarea {
     padding-top: 25px;
     width: 5px;
     height: 980px;
-    
+
     background-color: $secondary-1-1;
     font-size: 50px;
     content: '';
@@ -217,7 +217,7 @@ textarea {
     width: 12px;
     height: 12px;
     border-radius: 16px;
-    
+
     background-color: $secondary-1-1;
     content: '';
 }
@@ -231,7 +231,7 @@ textarea {
 }
 
 #main #schedule>.event {
-    
+
 }
 
 #main #schedule>.events {
@@ -271,7 +271,7 @@ textarea {
         margin-right: 17px;
         width: 66px;
         padding: 5px 20px 5px 5px;
-        
+
         background-color: $complement;
         color: white;
         border-radius: 3px;
@@ -299,7 +299,7 @@ textarea {
         left: 50%;
         margin-left: 17px;
         padding: 5px 10px 5px 20px;
-        
+
         background-color: $secondary-1-1;
         color: white;
         border-radius: 3px;
@@ -334,7 +334,7 @@ textarea {
     width: 260px;
     height: 50px;
     display: block;
-    
+
     background-color: #fafafa;
     font-size: 50px;
     content: 'Sponsors';
@@ -362,7 +362,7 @@ textarea {
 }
 
 #sponsors div .level {
-    
+
 }
 
 #sponsors div .sponsor::after {
@@ -371,7 +371,7 @@ textarea {
     position: relative;
     left: 20px;
     top: -45px;
-    
+
     font-size: 70px;
     color: $secondary-1-1;
 }
@@ -402,7 +402,7 @@ textarea {
     position: relative;
     left: 15px;
     padding-right: 5px;
-    
+
     color: $secondary-1-1;
     content: '= {';
 }
@@ -462,13 +462,13 @@ footer {
 }
 
 footer>div {
-    
+
 }
 
 footer a {
     color:rgb(109, 183, 157);
     transition: color 0.3s;
-    
+
     &:hover {
         color: rgb(180, 180, 180);
     }
@@ -495,9 +495,9 @@ header #downArrow {
     width: 50px;
     height: 50px;
     border-radius: 30px;
-    transform: scale(1.3) translateZ(0);
-    -webkit-transform: scale(1.3) translateZ(0);
-    
+    transform: scale(1.3) translate3d(0px, 0px, 0px);
+    -webkit-transform: scale(1.3) translate3d(0px, 0px, 0px);
+
     font-size: 50px;
     text-align: center;
 }
@@ -530,21 +530,21 @@ header #registerButton {
     position: relative;
     top: -80px;
     left: 12px;
-} 
+}
 
 header #volunteerButton {
     font-size: 18px;
     height: 50px;
     position: relative;
     top: -50px;
-} 
+}
 
 header #sponsorButton {
     font-size: 18px;
     height: 50px;
     position:relative;
     top: -50px;
-} 
+}
 
 #floatingUpArrow {
     display: none;
@@ -555,12 +555,12 @@ header #sponsorButton {
     width: 50px;
     height: 50px;
     border-radius: 30px;
-    transform: scale(1.3) rotateZ(0deg) translateZ(0);
-    -webkit-transform: scale(1.3) rotateZ(0deg) translateZ(0);
-    
+    transform: scale(1.3) rotateZ(0deg) translate3d(0px, 0px, 0px);
+    -webkit-transform: scale(1.3) rotateZ(0deg) translate3d(0px, 0px, 0px);
+
     font-size: 50px;
     text-align: center;
-    
+
     transition: transform 0.5s;
 }
 
@@ -581,9 +581,9 @@ header #sponsorButton {
     height: 600px;
     max-height: 100%;
     z-index: 2;
-    transform: scale(0.22, 0.1) translate(-70px, -110px) translateZ(0);
-    -webkit-transform: scale(0.22, 0.1) translate(-70px, -110px) translateZ(0);
-    
+    transform: scale(0.22, 0.1) translate3d(-70px, -110px, 0px);
+    -webkit-transform: scale(0.22, 0.1) translate3d(-70px, -110px, 0px);
+
     opacity: 0;
     border-radius: 2px;
     background-color: rgb(250, 250, 250);
@@ -704,7 +704,7 @@ header #sponsorButton {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     pointer-events: auto;
-    
+
     transition: color 0.5s;
 }
 
@@ -781,7 +781,7 @@ header #sponsorButton {
         margin-left: 10px;
         margin-right: 0px;
     }
-    
+
     header #downArrow {
         top: 630px;
     }
@@ -812,7 +812,7 @@ header #sponsorButton {
         width: 200px;
         height: 0px;
     }
-    
+
     header #downArrow {
         top: 770px;
     }
@@ -827,7 +827,7 @@ header #sponsorButton {
             margin-bottom: 0px;
         }
     }
-    
+
     header #downArrow {
         top: 370px;
     }
